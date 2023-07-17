@@ -25,6 +25,8 @@ namespace CapaDatos
             this.dSiglas = pSiglas;
         }
 
+        #region
+
         public int IDRol
         {
             get { return dIDRol; }
@@ -42,6 +44,8 @@ namespace CapaDatos
             get { return dSiglas; }
             set { dSiglas = value; }
         }
+
+        #endregion
 
         public string Insertar(CDRol objRol)
         {
@@ -104,14 +108,14 @@ namespace CapaDatos
 
         public DataTable RolConsultar(String miparametro)
         {
-            DataTable dt = new DataTable(); //Se Crea DataTable que tomará los datos de los Suplidores
+            DataTable dt = new DataTable();
             SqlDataReader leerDatos; //Creamos el DataReader
             try
             {
                 SqlCommand sqlCmd = new SqlCommand(); //Establecer el comando
                 sqlCmd.Connection = new Conexion().dbconexion; //Conexión que va a usar el comando
                 sqlCmd.Connection.Open(); //Se abre la conexión
-                sqlCmd.CommandText = "EmpleadoConsultar"; //Nombre del Proc. Almacenado a usar
+                sqlCmd.CommandText = "RolConsultar"; //Nombre del Proc. Almacenado a usar
                 sqlCmd.CommandType = CommandType.StoredProcedure; //Se trata de un proc. almacenado
                 sqlCmd.Parameters.AddWithValue("@pvalor", miparametro); //Se pasa el valor a buscar
                 leerDatos = sqlCmd.ExecuteReader(); //Llenamos el SqlDataReader con los datos resultantes

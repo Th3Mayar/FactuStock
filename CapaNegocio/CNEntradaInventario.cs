@@ -12,33 +12,33 @@ namespace CapaNegocio
 {
     public class CNEntradaInventario
     {
-        public static string Insertar(int pIDEntrada, DateTime pFechaEntrada, int pCantidad, int pIDProducto, int pIDEmpleado, string pEstado)
+        public static string Insertar(int pIDEntrada, DateTime pFechaEntrada, int pCantidad, int pIDProducto, int pIDEmpleado, int pIDEstado)
         {
-            CDEntradaInventario objEntradaInventarioInsertar = new CDEntradaInventario();
-            objEntradaInventarioInsertar.IDEntrada = pIDEntrada;
-            objEntradaInventarioInsertar.FechaEntrada = pFechaEntrada;
-            objEntradaInventarioInsertar.Cantidad = pCantidad;
-            objEntradaInventarioInsertar.IDProducto = pIDProducto;
-            objEntradaInventarioInsertar.IDEmpleado = pIDEmpleado;
-            objEntradaInventarioInsertar.Estado = pEstado;
-            return objEntradaInventarioInsertar.Insertar(objEntradaInventarioInsertar);
+            CDEntradaInventario objEntradaInventario = new CDEntradaInventario();
+            objEntradaInventario.IDEntrada = pIDEntrada;
+            objEntradaInventario.FechaEntrada = pFechaEntrada;
+            objEntradaInventario.Cantidad = pCantidad;
+            objEntradaInventario.IDProducto = pIDProducto;
+            objEntradaInventario.IDEmpleado = pIDEmpleado;
+            objEntradaInventario.IDEstado = pIDEstado;
+            return objEntradaInventario.Insertar(objEntradaInventario);
         }
-        public static string Actualizar(DateTime pFechaEntrada, int pCantidad, int pIDProducto, int pIDEmpleado, string pEstado)
+        public static string Actualizar(DateTime pFechaEntrada, int pCantidad, int pIDProducto, int pIDEmpleado, int pIDEstado)
         {
-            CDEntradaInventario objEntradaInventarioActualizar = new CDEntradaInventario();
-            objEntradaInventarioActualizar.FechaEntrada = pFechaEntrada;
-            objEntradaInventarioActualizar.Cantidad = pCantidad;
-            objEntradaInventarioActualizar.IDProducto = pIDProducto;
-            objEntradaInventarioActualizar.IDEmpleado = pIDEmpleado;
-            objEntradaInventarioActualizar.Estado = pEstado;
-            return objEntradaInventarioActualizar.Actualizar(objEntradaInventarioActualizar);
+            CDEntradaInventario objEntradaInventarioAct = new CDEntradaInventario();
+            objEntradaInventarioAct.FechaEntrada = pFechaEntrada;
+            objEntradaInventarioAct.Cantidad = pCantidad;
+            objEntradaInventarioAct.IDProducto = pIDProducto;
+            objEntradaInventarioAct.IDEmpleado = pIDEmpleado;
+            objEntradaInventarioAct.IDEstado = pIDEstado;
+            return objEntradaInventarioAct.Actualizar(objEntradaInventarioAct);
         }
-        public DataTable ObtenerCDEntradaInventario(string miparametro)
+        public DataTable ObtenerEntradaInventario(string miparametro)
         {
-            CDEntradaInventario objEntradaInventarioActualizar = new CDEntradaInventario();
+            CDEntradaInventario objEntradaInventario = new CDEntradaInventario();
             DataTable dt = new DataTable(); //creamos un nuevo DataTable
                                             //El DataTable se llena con todos los datos devueltos
-            dt = objEntradaInventarioActualizar.EntradaConsultar(miparametro);
+            dt = objEntradaInventario.EntradaConsultar(miparametro);
             return dt; //Se retorna el DataTable con los datos adquiridos
 
         }

@@ -123,7 +123,7 @@ namespace CapaDatos
             return mensaje;
         }
 
-        public string Actualizar(CDProveedor objProveedor)
+        public string Actualizar(CDProveedor objProveedorAct)
         {
             string mensaje = "";
             SqlConnection sqlCon = new SqlConnection();
@@ -133,15 +133,15 @@ namespace CapaDatos
                 SqlCommand micomando = new SqlCommand("ProveedorActualizar", sqlCon);
                 sqlCon.Open();
                 micomando.CommandType = CommandType.StoredProcedure;
-                micomando.Parameters.AddWithValue("@pIDProveedor", objProveedor.IDProveedor);
-                micomando.Parameters.AddWithValue("@pCantidad", objProveedor.Cantidad);
-                micomando.Parameters.AddWithValue("@pIDEstado", objProveedor.IDEstado);
-                micomando.Parameters.AddWithValue("@pFechaRegistro", objProveedor.FechaRegistro);
-                micomando.Parameters.AddWithValue("@pNombreEmpresa", objProveedor.NombreEmpresa);
-                micomando.Parameters.AddWithValue("@pContacto", objProveedor.Contacto);
-                micomando.Parameters.AddWithValue("@pTelefono", objProveedor.Telefono);
-                micomando.Parameters.AddWithValue("@pDireccion", objProveedor.Direccion);
-                micomando.Parameters.AddWithValue("@pRepresentante", objProveedor.Representante);
+                micomando.Parameters.AddWithValue("@pIDProveedor", objProveedorAct.IDProveedor);
+                micomando.Parameters.AddWithValue("@pCantidad", objProveedorAct.Cantidad);
+                micomando.Parameters.AddWithValue("@pIDEstado", objProveedorAct.IDEstado);
+                micomando.Parameters.AddWithValue("@pFechaRegistro", objProveedorAct.FechaRegistro);
+                micomando.Parameters.AddWithValue("@pNombreEmpresa", objProveedorAct.NombreEmpresa);
+                micomando.Parameters.AddWithValue("@pContacto", objProveedorAct.Contacto);
+                micomando.Parameters.AddWithValue("@pTelefono", objProveedorAct.Telefono);
+                micomando.Parameters.AddWithValue("@pDireccion", objProveedorAct.Direccion);
+                micomando.Parameters.AddWithValue("@pRepresentante", objProveedorAct.Representante);
 
                 mensaje = micomando.ExecuteNonQuery() == 1 ? "Datos actualizados correctamente!" :
                 "No se pudo actualizar correctamente los datos!";
@@ -160,7 +160,7 @@ namespace CapaDatos
         //Método para consultar datos filtrados de la tabla. Se recibe el valor del parámetro
         public DataTable ProveedorConsultar(String miparametro)
         {
-            DataTable dt = new DataTable(); //Se Crea DataTable que tomará los datos de los Suplidores
+            DataTable dt = new DataTable(); //Se Crea DataTable que tomará los datos de los Proveedores
             SqlDataReader leerDatos; //Creamos el DataReader
             try
             {
