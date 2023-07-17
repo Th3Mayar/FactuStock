@@ -44,10 +44,13 @@
     <Compile Include="CNCategoria.cs" />
     <Compile Include="CNCliente.cs" />
     <Compile Include="CNEmpleado.cs" />
+    <Compile Include="CNEmpresa.cs" />
+    <Compile Include="CNEntradaInventario.cs" />
     <Compile Include="CNEstado.cs" />
     <Compile Include="CNProducto.cs" />
     <Compile Include="CNProveedor.cs" />
     <Compile Include="CNRol.cs" />
+    <Compile Include="CNSalidaInventario.cs" />
     <Compile Include="CNVentaCabecera.cs" />
     <Compile Include="CNVentaDetalle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

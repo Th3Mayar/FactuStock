@@ -11,17 +11,16 @@ namespace CapaDatos
 {
     public class CDEmpleado
     {
-        private int dIDEmpleado, dTelefono;
-        private string dCedula, dNombre, dApellido, dContacto, dDireccion, dRol;
+        private int dIDEmpleado, dTelefono, dIDRol, dIDEstado;
+        private string dCedula, dNombre, dApellido, dContacto, dDireccion;
         private DateTime dFechaNacimiento;
-        private string dEstado;
 
         public CDEmpleado()
         {
 
         }
 
-        public CDEmpleado(int pIDEmpleado, string pCedula, string pNombre, string pApellido, string pContacto, string pDireccion, DateTime pFechaNacimiento, string pEstado, string pRol, int pTelefono)
+        public CDEmpleado(int pIDEmpleado, string pCedula, string pNombre, string pApellido, string pContacto, string pDireccion, int pTelefono, DateTime pFechaNacimiento, int pIDEstado, int pIDRol)
         {
             this.dIDEmpleado = pIDEmpleado;
             this.dCedula = pCedula;
@@ -29,11 +28,13 @@ namespace CapaDatos
             this.dApellido = pApellido;
             this.dContacto = pContacto;
             this.dDireccion = pDireccion;
-            this.dFechaNacimiento = pFechaNacimiento;
-            this.dEstado = pEstado;
-            this.dRol = pRol;
             this.dTelefono = pTelefono;
+            this.dFechaNacimiento = pFechaNacimiento;
+            this.dIDEstado = pIDEstado;
+            this.dIDRol = pIDRol;
         }
+
+        #region
 
         public int IDEmpleado
         {
@@ -77,16 +78,16 @@ namespace CapaDatos
             set { dFechaNacimiento = value; }
         }
 
-        public string Estado
+        public int IDEstado
         {
-            get { return dEstado; }
-            set { dEstado = value; }
+            get { return dIDEstado; }
+            set { dIDEstado = value; }
         }
 
-        public string Rol
+        public int IDRol
         {
-            get { return dRol; }
-            set { dRol = value; }
+            get { return dIDRol; }
+            set { dIDRol = value; }
         }
 
         public int Telefono
@@ -94,6 +95,8 @@ namespace CapaDatos
             get { return dTelefono; }
             set { dTelefono = value; }
         }
+
+        #endregion
 
         public string Insertar(CDEmpleado objEmpleado)
         {
@@ -110,10 +113,10 @@ namespace CapaDatos
                 micomando.Parameters.AddWithValue("@pApellido", objEmpleado.Apellido);
                 micomando.Parameters.AddWithValue("@pContacto", objEmpleado.Contacto);
                 micomando.Parameters.AddWithValue("@pDireccion", objEmpleado.Direccion);
-                micomando.Parameters.AddWithValue("@pFechaNacimiento", objEmpleado.FechaNacimiento);
-                micomando.Parameters.AddWithValue("@pEstado", objEmpleado.Estado);
-                micomando.Parameters.AddWithValue("@pRol", objEmpleado.Rol);
                 micomando.Parameters.AddWithValue("@pTelefono", objEmpleado.Telefono);
+                micomando.Parameters.AddWithValue("@pFechaNacimiento", objEmpleado.FechaNacimiento);
+                micomando.Parameters.AddWithValue("@pIDEstado", objEmpleado.IDEstado);
+                micomando.Parameters.AddWithValue("@pIDRol", objEmpleado.IDRol);
 
                 sqlCon.Open();
                 mensaje = micomando.ExecuteNonQuery() == 1 ? "Inserción de datos completada correctamente!" :
@@ -147,10 +150,10 @@ namespace CapaDatos
                 micomando.Parameters.AddWithValue("@pApellido", objEmpleadoAct.Apellido);
                 micomando.Parameters.AddWithValue("@pContacto", objEmpleadoAct.Contacto);
                 micomando.Parameters.AddWithValue("@pDireccion", objEmpleadoAct.Direccion);
-                micomando.Parameters.AddWithValue("@pFechaNacimiento", objEmpleadoAct.FechaNacimiento);
-                micomando.Parameters.AddWithValue("@pIDEstado", objEmpleadoAct.Estado);
-                micomando.Parameters.AddWithValue("@pIDRol", objEmpleadoAct.Rol);
                 micomando.Parameters.AddWithValue("@pTelefono", objEmpleadoAct.Telefono);
+                micomando.Parameters.AddWithValue("@pFechaNacimiento", objEmpleadoAct.FechaNacimiento);
+                micomando.Parameters.AddWithValue("@pIDEstado", objEmpleadoAct.IDEstado);
+                micomando.Parameters.AddWithValue("@pIDRol", objEmpleadoAct.IDRol);
 
                 sqlCon.Open();
                 mensaje = micomando.ExecuteNonQuery() == 1 ? "Actualización de datos completada correctamente!" :
@@ -168,9 +171,9 @@ namespace CapaDatos
             return mensaje;
         }
 
-        public DataTable ClienteConsultar(String miparametro)
+        public DataTable EmpleadoConsultar(String miparametro)
         {
-            DataTable dt = new DataTable(); //Se Crea DataTable que tomará los datos de los Suplidores
+            DataTable dt = new DataTable();
             SqlDataReader leerDatos; //Creamos el DataReader
             try
             {

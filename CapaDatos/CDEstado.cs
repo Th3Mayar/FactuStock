@@ -56,28 +56,14 @@ namespace CapaDatos
             {
                 //asignamos a sqlCon la conexión con las base de datos a traves de la clase que creamos
                 sqlCon.ConnectionString = Conexion.miconexion;
-                //Escribo el nombre del procedimiento almacenado que utilizaré, en este caso SuplidorInsertar
+
                 SqlCommand micomando = new SqlCommand("EstadoInsertar", sqlCon);
                 sqlCon.Open(); //Abro la conexión
                                //indico que se ejecutara un procedimiento almacenado
                 micomando.CommandType = CommandType.StoredProcedure;
 
-                /*Envío los parámetros al procedimiento almacenado.
-                - Los nombres que aparece con el signo @ delante son los parámetros que hemos
-                creado en el procedimiento almacenado de la base de datos y debemos escribirlos tal cual
-               aparecen en dicho procedimiento almacenado (respetar mayúsculas y mnúsculas).
-                - Los nombres que aparecen al lado son las propiedades del objeto objSuplidor que se pasará
-                como parámetro con los valores deseados. Puede usarse como lo declaramos en la clase
-               (usando el prefijo ( d ), por ejemplo: dSuplidor, o bien , hacerlo como se declaran en los métodos Get y
-               Set.
-                */
                 micomando.Parameters.AddWithValue("@pEstado", objEstado.Estado);
                 micomando.Parameters.AddWithValue("@pSigla", objEstado.Sigla);
-
-                //hasta aquí el pase de parámetros
-
-                /*Ejecuto la instrucción. Si se devuelve el valor 1 significa que todo funcionó correctamente de lo
-                 * contrario se devuelve el mensaje indicando que fue incorrecto. */
 
                 mensaje = micomando.ExecuteNonQuery() == 1 ? "Inserción de datos completada correctamente!" :
                       "No se pudo insertar correctamente los nuevos datos!";
@@ -96,8 +82,7 @@ namespace CapaDatos
             return mensaje;
         }
 
-        //método para actualizar los datos del Suplidor. Recibirá el objeto objSuplidor como parámetro
-        public string Actualizar(CDEstado objEstado)
+        public string Actualizar(CDEstado objEstadoAct)
         {
             string mensaje = "";
             //creamos un nuevo objeto de tipo SqlConnection
@@ -107,29 +92,15 @@ namespace CapaDatos
             {
                 //asignamos a sqlCon la conexión con las base de datos a traves de la clase que creamos
                 sqlCon.ConnectionString = Conexion.miconexion;
-                //Escribo el nombre del procedimiento almacenado que utilizaré, en este caso SuplidorInsertar
+
                 SqlCommand micomando = new SqlCommand("EstadoActualizar", sqlCon);
                 sqlCon.Open(); //Abro la conexión
                                //indico que se ejecutara un procedimiento almacenado
                 micomando.CommandType = CommandType.StoredProcedure;
 
-                /*Envío los parámetros al procedimiento almacenado.
-                - Los nombres que aparece con el signo @ delante son los parámetros que hemos
-                creado en el procedimiento almacenado de la base de datos y debemos escribirlos tal cual
-               aparecen en dicho procedimiento almacenado (respetar mayúsculas y mnúsculas).
-                - Los nombres que aparecen al lado son las propiedades del objeto objSuplidor que se pasará
-                como parámetro con los valores deseados. Puede usarse como lo declaramos en la clase
-               (usando el prefijo ( d ), por ejemplo: dSuplidor, o bien , hacerlo como se declaran en los métodos Get y
-               Set.
-                */
-                micomando.Parameters.AddWithValue("@pIDEstado", objEstado.IDEstado);
-                micomando.Parameters.AddWithValue("@pEstado", objEstado.Estado);
-                micomando.Parameters.AddWithValue("@pSigla", objEstado.Sigla);
-
-                //hasta aquí el pase de parámetros
-
-                /*Ejecuto la instrucción. Si se devuelve el valor 1 significa que todo funcionó correctamente de lo
-                 * contrario se devuelve el mensaje indicando que fue incorrecto. */
+                micomando.Parameters.AddWithValue("@pIDEstado", objEstadoAct.IDEstado);
+                micomando.Parameters.AddWithValue("@pEstado", objEstadoAct.Estado);
+                micomando.Parameters.AddWithValue("@pSigla", objEstadoAct.Sigla);
 
                 mensaje = micomando.ExecuteNonQuery() == 1 ? "Actualización de datos completada correctamente!" :
                       "No se pudo actualizar correctamente los nuevos datos!";

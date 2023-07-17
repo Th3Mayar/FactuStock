@@ -10,8 +10,8 @@ namespace CapaDatos
 {
     public class CDCliente
     {
-        private int dIDCliente;
-        private string dRNC, dNombre, dApellido, dContacto, dDireccion, dEstado;
+        private int dIDCliente, dIDEstado;
+        private string dCedula, dNombre, dApellido, dContacto, dDireccion;
         private DateTime dFechaNacimiento;
 
         public CDCliente()
@@ -19,10 +19,10 @@ namespace CapaDatos
 
         }
 
-        public CDCliente(int pIDCliente, string pRNC, string pNombre, string pApellido, string pContacto, string pDireccion, DateTime pFechaNacimiento, string pEstado)
+        public CDCliente(int pIDCliente, string pCedula, string pNombre, string pApellido, string pContacto, string pDireccion, DateTime pFechaNacimiento, int pIDEstado)
         {
             this.dIDCliente = pIDCliente;
-            this.dRNC = pRNC;
+            this.dCedula = pCedula;
             this.dNombre = pNombre;
             this.dApellido = pApellido;
             this.dContacto = pContacto;
@@ -30,6 +30,8 @@ namespace CapaDatos
             this.dFechaNacimiento = pFechaNacimiento;
             this.dEstado = pEstado;
         }
+
+        #region
 
         public int IDCliente
         {
@@ -78,6 +80,8 @@ namespace CapaDatos
             get { return dEstado; }
             set { dEstado = value; }
         }
+
+        #endregion
 
         public string Insertar(CDCliente objCliente)
         {
@@ -150,7 +154,7 @@ namespace CapaDatos
 
         public DataTable ClienteConsultar(String miparametro)
         {
-            DataTable dt = new DataTable(); //Se Crea DataTable que tomará los datos de los Suplidores
+            DataTable dt = new DataTable();
             SqlDataReader leerDatos; //Creamos el DataReader
             try
             {

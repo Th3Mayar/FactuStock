@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using System.Data.Sql;
-//Agregamos la capa de datos para poder comunicarnos con ella
 using CapaDatos;
 
 namespace CapaNegocio
 {
     public class CNEstado
     {
-        //Preparamos los datos para insertar un nuevo Suplidor. A los parametros recibidos les pongo el prefijo p
+        //Preparamos los datos para insertar un nuevo Estado. A los parametros recibidos les pongo el prefijo p
         public static string Insertar(string pEstado, string pSigla)
         {
             CDEstado objEstado = new CDEstado();
@@ -31,7 +30,7 @@ namespace CapaNegocio
             objEstado.IDEstado = pIDEstado;
             objEstado.Estado = pEstado;
             objEstado.Sigla = pSigla;
-            //Llamamos al método insertar del suplidor pasándole el objeto creado
+            //Llamamos al método insertar del Estado pasándole el objeto creado
             //y retornando el mensaje que indica si se pudo o no realizar la acción
             return objEstado.Actualizar(objEstado);
         } //Fin del método Actualizar

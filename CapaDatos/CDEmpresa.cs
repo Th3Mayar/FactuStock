@@ -33,6 +33,8 @@ namespace CapaDatos
             this.dImagen = pImagen;
         }
 
+        #region
+
         public int IDEmpresa
         {
             get { return dIDEmpresa; }
@@ -87,6 +89,7 @@ namespace CapaDatos
             set { dImagen = value; }
         }
 
+        #endregion
 
         public string Insertar(CDEmpresa objEmpresa)
         {
@@ -161,7 +164,7 @@ namespace CapaDatos
 
         public DataTable EmpresaConsultar(String miparametro)
         {
-            DataTable dt = new DataTable(); //Se Crea DataTable que tomará los datos de los Suplidores
+            DataTable dt = new DataTable();
             SqlDataReader leerDatos; //Creamos el DataReader
             try
             {
