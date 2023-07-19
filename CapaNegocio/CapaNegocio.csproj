@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="CNCategoria.cs" />
     <Compile Include="CNCliente.cs" />
+    <Compile Include="CNCondicionProducto.cs" />
     <Compile Include="CNEmpleado.cs" />
     <Compile Include="CNEmpresa.cs" />
     <Compile Include="CNEntradaInventario.cs" />
@@ -51,6 +52,7 @@
     <Compile Include="CNProveedor.cs" />
     <Compile Include="CNRol.cs" />
     <Compile Include="CNSalidaInventario.cs" />
+    <Compile Include="CNSuministro.cs" />
     <Compile Include="CNVentaCabecera.cs" />
     <Compile Include="CNVentaDetalle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

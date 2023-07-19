@@ -19,7 +19,6 @@ namespace CapaDatos
 
         }
 
-        #region
         public CDEntradaInventario(int pIDEntrada, DateTime pFechaEntrada, int pCantidad, int pIDProducto, int pIDEmpleado, int pIDEstado)
         {
             this.dIDEntrada = pIDEntrada;

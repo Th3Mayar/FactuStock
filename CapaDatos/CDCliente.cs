@@ -28,7 +28,7 @@ namespace CapaDatos
             this.dContacto = pContacto;
             this.dDireccion = pDireccion;
             this.dFechaNacimiento = pFechaNacimiento;
-            this.dEstado = pEstado;
+            this.dIDEstado = pIDEstado;
         }
 
         #region
@@ -39,10 +39,10 @@ namespace CapaDatos
             set { dIDCliente = value; }
         }
 
-        public string RNC
+        public string Cedula
         {
-            get { return dRNC; }
-            set { dRNC = value; }
+            get { return dCedula; }
+            set { dCedula = value; }
         }
 
         public string Nombre
@@ -75,10 +75,10 @@ namespace CapaDatos
             set { dFechaNacimiento = value; }
         }
 
-        public string Estado
+        public int IDEstado
         {
-            get { return dEstado; }
-            set { dEstado = value; }
+            get { return dIDEstado; }
+            set { dIDEstado = value; }
         }
 
         #endregion
@@ -93,13 +93,13 @@ namespace CapaDatos
                 SqlCommand micomando = new SqlCommand("ClienteInsertar", sqlCon);
                 micomando.CommandType = CommandType.StoredProcedure;
 
-                micomando.Parameters.AddWithValue("@pRNC", objCliente.RNC);
+                micomando.Parameters.AddWithValue("@pCedula", objCliente.Cedula);
                 micomando.Parameters.AddWithValue("@pNombre", objCliente.Nombre);
                 micomando.Parameters.AddWithValue("@pApellido", objCliente.Apellido);
                 micomando.Parameters.AddWithValue("@pContacto", objCliente.Contacto);
                 micomando.Parameters.AddWithValue("@pDireccion", objCliente.Direccion);
                 micomando.Parameters.AddWithValue("@pFechaNacimiento", objCliente.FechaNacimiento);
-                micomando.Parameters.AddWithValue("@pEstado", objCliente.Estado);
+                micomando.Parameters.AddWithValue("@pIDEstado", objCliente.IDEstado);
 
                 sqlCon.Open();
                 mensaje = micomando.ExecuteNonQuery() == 1 ? "Inserción de datos completada correctamente!" :
@@ -128,13 +128,13 @@ namespace CapaDatos
                 micomando.CommandType = CommandType.StoredProcedure;
 
                 micomando.Parameters.AddWithValue("@pIDCliente", objClienteAct.IDCliente);
-                micomando.Parameters.AddWithValue("@pRNC", objClienteAct.RNC);
+                micomando.Parameters.AddWithValue("@pCedula", objClienteAct.Cedula);
                 micomando.Parameters.AddWithValue("@pNombre", objClienteAct.Nombre);
                 micomando.Parameters.AddWithValue("@pApellido", objClienteAct.Apellido);
                 micomando.Parameters.AddWithValue("@pContacto", objClienteAct.Contacto);
                 micomando.Parameters.AddWithValue("@pDireccion", objClienteAct.Direccion);
                 micomando.Parameters.AddWithValue("@pFechaNacimiento", objClienteAct.FechaNacimiento);
-                micomando.Parameters.AddWithValue("@pEstado", objClienteAct.Estado);
+                micomando.Parameters.AddWithValue("@pIDEstado", objClienteAct.IDEstado);
 
                 sqlCon.Open();
                 mensaje = micomando.ExecuteNonQuery() == 1 ? "Actualización de datos completada correctamente!" :
@@ -161,7 +161,7 @@ namespace CapaDatos
                 SqlCommand sqlmicomando = new SqlCommand(); //Establecer el comando
                 sqlmicomando.Connection = new Conexion().dbconexion; //Conexión que va a usar el comando
                 sqlmicomando.Connection.Open(); //Se abre la conexión
-                sqlmicomando.CommandText = "lienteConsultar"; //Nombre del Proc. Almacenado a usar
+                sqlmicomando.CommandText = "ClienteConsultar"; //Nombre del Proc. Almacenado a usar
                 sqlmicomando.CommandType = CommandType.StoredProcedure; //Se trata de un proc. almacenado
                 sqlmicomando.Parameters.AddWithValue("@pvalor", miparametro); //Se pasa el valor a buscar
                 leerDatos = sqlmicomando.ExecuteReader(); //Llenamos el SqlDataReader con los datos resultantes
