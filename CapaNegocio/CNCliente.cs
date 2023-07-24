@@ -15,18 +15,18 @@ namespace CapaNegocio
         private static object accion;
 
         //Preparamos los datos para insertar un nuevo Suplidor. A los parametros recibidos les pongo el prefijo p
-        public static string Insertar(int pIDCliente, string pCliente, string pDireccion, string pContacto, string pFecha_Nacimiento, string pApellido, string pEstado, string pNombre, string pRNC)
+        public static string Insertar(int pIDCliente, string pCliente, string pDireccion, string pContacto, DateTime pFecha_Nacimiento, string pApellido, int pEstado, string pNombre, string pRNC)
         {
             CDCliente objCliente = new CDCliente();
             objCliente.IDCliente = pIDCliente;
-            objCliente.Cliente = pCliente;
+            objCliente.Nombre = pCliente;
             objCliente.Direccion = pDireccion;
             objCliente.Contacto = pContacto;
-            objCliente.Fecha_Nacimiento = pFecha_Nacimiento;
+            objCliente.FechaNacimiento = pFecha_Nacimiento;
             objCliente.Apellido = pApellido;
-            objCliente.Estado = pEstado;
+            objCliente.IDEstado = pEstado;
             objCliente.Nombre = pNombre;
-            objCliente.RNC = pRNC;
+            objCliente.Cedula = pRNC;
 
 
             //Llamamos al método insertar del suplidor pasándole el objeto creado
@@ -36,18 +36,18 @@ namespace CapaNegocio
 
 
 
-        public static string Actualizar(int pIDCliente, string pCliente, string pDireccion, string pContacto, string pFecha_Nacimiento, string pApellido, string pEstado, string pNombre, string pRNC)
+        public static string Actualizar(int pIDCliente, string pCliente, string pDireccion, string pContacto, DateTime pFecha_Nacimiento, string pApellido, int pEstado, string pNombre, string pRNC)
         {
             CDCliente objCliente = new CDCliente();
             objCliente.IDCliente = pIDCliente;
-            objCliente.Cliente = pCliente;
+            objCliente.Nombre = pCliente;
             objCliente.Direccion = pDireccion;
             objCliente.Contacto = pContacto;
-            objCliente.Fecha_Nacimiento = pFecha_Nacimiento;
+            objCliente.FechaNacimiento = pFecha_Nacimiento;
             objCliente.Apellido = pApellido;
-            objCliente.Estado = pEstado;
+            objCliente.IDEstado = pEstado;
             objCliente.Nombre = pNombre;
-            objCliente.RNC = pRNC;
+            objCliente.Cedula = pRNC;
             //Llamamos al método insertar del suplidor pasándole el objeto creado
             //y retornando el mensaje que indica si se pudo o no realizar la acción
             return objCliente.Actualizar(objCliente);
@@ -64,29 +64,6 @@ namespace CapaNegocio
             dt = objCliente.ClienteConsultar(miparametro);
             return dt; //Se retorna el DataTable con los datos adquiridos
         }
-
-
-        public static string InsertarActualizar(int accion, int pIDCliente, string pCliente, string pDireccion, string pContacto, string pFecha_Nacimiento, string pApellido, string pEstado, string pNombre, string pRNC)
-        {
-            CDCliente objCliente = new CDCliente();
-            objCliente.IDCliente = pIDCliente;
-            objCliente.Cliente = pCliente;
-            objCliente.Direccion = pDireccion;
-            objCliente.Contacto = pContacto;
-            objCliente.Fecha_Nacimiento = pFecha_Nacimiento;
-            objCliente.Apellido = pApellido;
-            objCliente.Estado = pEstado;
-            objCliente.Nombre = pNombre;
-            objCliente.RNC = pRNC;
-
-            return objCliente.InsertarActualizar(objCliente, accion);
-        }
-
-
-
-
-
-
 
     }
 

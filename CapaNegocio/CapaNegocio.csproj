@@ -53,6 +53,7 @@
     <Compile Include="CNRol.cs" />
     <Compile Include="CNSalidaInventario.cs" />
     <Compile Include="CNSuministro.cs" />
+    <Compile Include="CNValidarUsuario.cs" />
     <Compile Include="CNVentaCabecera.cs" />
     <Compile Include="CNVentaDetalle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

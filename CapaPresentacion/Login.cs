@@ -7,9 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//using CapaNegocio;
 
 namespace CapaPresentacion
 {
+
     public partial class Login : Form
     {
         public Login()
@@ -17,18 +19,34 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            string usuario = txtUsuario.Text;
-            string pass = txtPass.Text;
+            Login login = new Login();
 
-            if(usuario == "Roselyn" && pass == "1234")
+            mensajeCredenciales.Visible = false;
+            mensaje.Visible = false;
+
+            string nombreUsuario = txtUsuario.Text;
+            string contrasena = txtPass.Text;
+
+            string esUsuarioValido = "Roselyn";
+            string esPasswordValida = "54321";
+
+            if (nombreUsuario == esUsuarioValido && contrasena == esPasswordValida)
             {
-                MessageBox.Show("Bienvenid@ al system");
+                mensajeCredenciales.Visible = true;
+                FMenu formulario = new FMenu();
+                formulario.Show();
+                login.Close();
             }
             else
             {
-                MessageBox.Show("Usuario y/o contraseñas incorrect.");
+                mensaje.Visible = true;
             }
         }
     }
