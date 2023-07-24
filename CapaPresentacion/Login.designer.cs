@@ -42,6 +42,7 @@ namespace CapaPresentacion
             this.btnSalir = new System.Windows.Forms.Button();
             this.mensaje = new System.Windows.Forms.Label();
             this.mensajeCredenciales = new System.Windows.Forms.Label();
+            this.mensajeVacio = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -193,11 +194,23 @@ namespace CapaPresentacion
             this.mensajeCredenciales.Text = "¡Credenciales correctas!";
             this.mensajeCredenciales.Visible = false;
             // 
+            // mensajeVacio
+            // 
+            this.mensajeVacio.AutoSize = true;
+            this.mensajeVacio.ForeColor = System.Drawing.Color.Red;
+            this.mensajeVacio.Location = new System.Drawing.Point(100, 350);
+            this.mensajeVacio.Name = "mensajeVacio";
+            this.mensajeVacio.Size = new System.Drawing.Size(168, 13);
+            this.mensajeVacio.TabIndex = 19;
+            this.mensajeVacio.Text = "Ingrese su usuario y/o contraseña";
+            this.mensajeVacio.Visible = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(360, 431);
+            this.Controls.Add(this.mensajeVacio);
             this.Controls.Add(this.mensajeCredenciales);
             this.Controls.Add(this.mensaje);
             this.Controls.Add(this.btnSalir);
@@ -235,5 +248,6 @@ namespace CapaPresentacion
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label mensaje;
         private System.Windows.Forms.Label mensajeCredenciales;
+        private System.Windows.Forms.Label mensajeVacio;
     }
 }

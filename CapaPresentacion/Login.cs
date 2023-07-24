@@ -30,6 +30,7 @@ namespace CapaPresentacion
 
             mensajeCredenciales.Visible = false;
             mensaje.Visible = false;
+            mensajeVacio.Visible = false;
 
             string nombreUsuario = txtUsuario.Text;
             string contrasena = txtPass.Text;
@@ -43,6 +44,10 @@ namespace CapaPresentacion
                 FMenu formulario = new FMenu();
                 formulario.Show();
                 login.Close();
+            }
+            else if(nombreUsuario == "" || contrasena == "")
+            {
+                mensajeVacio.Visible = true;
             }
             else
             {
