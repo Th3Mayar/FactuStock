@@ -177,5 +177,11 @@ namespace FactuStock
             ConsultarVentaGral consultarVenta = new ConsultarVentaGral();
             consultarVenta.Show();
         }
+
+        private void btnVentaDetalleConsultar_Click(object sender, EventArgs e)
+        {
+            ConsultarVentaDetalleGral consultarVentaDetalle = new ConsultarVentaDetalleGral();
+            consultarVentaDetalle.Show();
+        }
     }
 }
