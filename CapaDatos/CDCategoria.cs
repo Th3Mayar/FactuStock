@@ -51,6 +51,7 @@ namespace CapaDatos
             set { dDescripcion = value; }
         }
         #endregion
+
         public string Insertar(CDCategoria objCategoria)
         {
             string mensaje = "";
@@ -65,15 +66,10 @@ namespace CapaDatos
                 SqlCommand micomando = new SqlCommand("CategoriaProductoInsertar", sqlCon);
                 sqlCon.Open();
                 micomando.CommandType = CommandType.StoredProcedure;
-                micomando.Parameters.AddWithValue("@pNombre", objCategoria.Nombre);
+                micomando.Parameters.AddWithValue("@pCategoria", objCategoria.Nombre);
                 micomando.Parameters.AddWithValue("@pDescripcion", objCategoria.Descripcion);
                 micomando.Parameters.AddWithValue("@pIDEstado", objCategoria.IDEstado);
 
-                //hasta aquí el pase de parámetros
-
-                /*Ejecuto la instrucción. Si se devuelve el valor 1 significa que todo funcionó correctamente de lo
-                 * contrario se devuelve el mensaje indicando que fue incorrecto.
-                */
                 mensaje = micomando.ExecuteNonQuery() == 1 ? "Inserción de datos completada correctamente!" :
                 "No se pudo insertar correctamente los nuevos datos!";
             }
@@ -90,8 +86,7 @@ namespace CapaDatos
             //Devuelvo el mensaje correspondiente de acuerdo a lo que haya resultado del comando
             return mensaje;
         }
-        //método para actualizar los datos del Suplidor. Recibirá el objeto objSuplidor como parámetro
-        public string Actualizar(CDCategoria objCategoria)
+        public string Actualizar(CDCategoria objCategoriaAct)
         {
             string mensaje = "";
             SqlConnection sqlCon = new SqlConnection();
@@ -101,10 +96,10 @@ namespace CapaDatos
                 SqlCommand micomando = new SqlCommand("CategoriaProductoActualizar", sqlCon);
                 sqlCon.Open();
                 micomando.CommandType = CommandType.StoredProcedure;
-                micomando.Parameters.AddWithValue("@pIDCategoria", objCategoria.IDCategoria);
-                micomando.Parameters.AddWithValue("@pNombre", objCategoria.Nombre);
-                micomando.Parameters.AddWithValue("@pDescripcion", objCategoria.Descripcion);
-                micomando.Parameters.AddWithValue("@pIDEstado", objCategoria.IDEstado);
+                micomando.Parameters.AddWithValue("@pIDCategoria", objCategoriaAct.IDCategoria);
+                micomando.Parameters.AddWithValue("@pNombre", objCategoriaAct.Nombre);
+                micomando.Parameters.AddWithValue("@pDescripcion", objCategoriaAct.Descripcion);
+                micomando.Parameters.AddWithValue("@pIDEstado", objCategoriaAct.IDEstado);
                 mensaje = micomando.ExecuteNonQuery() == 1 ? "Datos actualizados correctamente!" :
                     "No se pudo actualizar correctamente los datos!";
             }
@@ -122,7 +117,7 @@ namespace CapaDatos
         //Método para consultar datos filtrados de la tabla. Se recibe el valor del parámetro
         public DataTable CategoriaProductoConsultar(String miparametro)
         {
-            DataTable dt = new DataTable(); //Se Crea DataTable que tomará los datos de los Suplidores
+            DataTable dt = new DataTable();
             SqlDataReader leerDatos; //Creamos el DataReader
             try
             {

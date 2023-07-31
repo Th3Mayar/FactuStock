@@ -11,32 +11,34 @@ namespace CapaDatos
 {
     public class CDEntradaInventario
     {
-        private int dIDSalida, dCantidad, dIDProducto;
-        private string dEstado;
+        private int dIDEntrada, dCantidad, dIDProducto, dIDEmpleado, dIDEstado;
         private DateTime dFechaEntrada;
 
         public CDEntradaInventario()
         {
 
         }
-        #region
-        public CDEntradaInventario(int pIDSalida, DateTime pFechaSalida, int pCantidad, int pIDProducto, string pEstado)
+        public CDEntradaInventario(int pIDEntrada, DateTime pFechaEntrada, int pCantidad, int pIDProducto, int pIDEmpleado, int pIDEstado)
         {
-            this.dIDSalida = pIDSalida;
-            this.dFechaSalida = pFechaSalida;
+            this.dIDEntrada = pIDEntrada;
+            this.dFechaEntrada = pFechaEntrada;
             this.dCantidad = pCantidad;
             this.dIDProducto = pIDProducto;
-            this.dEstado = pEstado;
+            this.dIDEmpleado = pIDEmpleado;
+            this.dIDEstado = pIDEstado;
         }
-        public int IDSalida
+
+        #region
+
+        public int IDEntrada
         {
-            get { return dIDSalida; }
-            set { dIDSalida = value; }
+            get { return dIDEntrada; }
+            set { dIDEntrada = value; }
         }
-        public DateTime FechaSalida
+        public DateTime FechaEntrada
         {
-            get { return dFechaSalida; }
-            set { dFechaSalida = value; }
+            get { return dFechaEntrada; }
+            set { dFechaEntrada = value; }
         }
         public int Cantidad
         {
@@ -48,14 +50,20 @@ namespace CapaDatos
             get { return dIDProducto; }
             set { dIDProducto = value; }
         }
-        public string Estado
+        public int IDEmpleado
         {
-            get { return dEstado; }
-            set { dEstado = value; }
+            get { return dIDEmpleado; }
+            set { dIDEmpleado = value; }
         }
+        public int IDEstado
+        {
+            get { return dIDEstado; }
+            set { dIDEstado = value; }
+        }
+
         #endregion
-        //método para insertar un nuevo Suplidor. Recibirá el objeto objSuplidor como parámetro
-        public string Insertar(CDEntradaInventario objEntrada)
+
+        public string Insertar(CDEntradaInventario objEntradaInventario)
         {
             string mensaje = "";
             //creamos un nuevo objeto de tipo SqlConnection
@@ -65,29 +73,18 @@ namespace CapaDatos
             {
                 //asignamos a sqlCon la conexión con las base de datos a traves de la clase que creamos
                 sqlCon.ConnectionString = Conexion.miconexion;
-                //Escribo el nombre del procedimiento almacenado que utilizaré, en este caso SuplidorInsertar
+
                 SqlCommand micomando = new SqlCommand("EntradaInventarioInsertar", sqlCon);
                 sqlCon.Open(); //Abro la conexión
                                //indico que se ejecutara un procedimiento almacenado
                 micomando.CommandType = CommandType.StoredProcedure;
 
-                /*Envío los parámetros al procedimiento almacenado.
-                - Los nombres que aparece con el signo @ delante son los parámetros que hemos
-                creado en el procedimiento almacenado de la base de datos y debemos escribirlos tal cual
-               aparecen en dicho procedimiento almacenado (respetar mayúsculas y mnúsculas).
-                - Los nombres que aparecen al lado son las propiedades del objeto objSuplidor que se pasará
-                como parámetro con los valores deseados. Puede usarse como lo declaramos en la clase
-               (usando el prefijo ( d ), por ejemplo: dSuplidor, o bien , hacerlo como se declaran en los métodos Get y
-               Set.
-                */
-                micomando.Parameters.AddWithValue("@pFechaEntrada", objEntrada.FechaSalida);
-                micomando.Parameters.AddWithValue("@pCantidad", objEntrada.Cantidad);
-                micomando.Parameters.AddWithValue("@pEstado", objEntrada.IDProducto);
-                micomando.Parameters.AddWithValue("@pIDProducto", objEntrada.IDProducto);
+                micomando.Parameters.AddWithValue("@pFechaEntrada", objEntradaInventario.FechaEntrada);
+                micomando.Parameters.AddWithValue("@pCantidad", objEntradaInventario.Cantidad);
+                micomando.Parameters.AddWithValue("@pIDProducto", objEntradaInventario.IDProducto);
+                micomando.Parameters.AddWithValue("@pIDEmpleado", objEntradaInventario.IDEmpleado);
+                micomando.Parameters.AddWithValue("@pIDEstado", objEntradaInventario.IDEstado);
 
-                /*Ejecuto la instrucción. Si se devuelve el valor 1 significa que todo funcionó correctamente de lo
-                * contrario se devuelve el mensaje indicando que fue incorrecto.
-                */
                 mensaje = micomando.ExecuteNonQuery() == 1 ? "Inserción de datos completada correctamente!" :
                 "No se pudo insertar correctamente los nuevos datos!";
             }
@@ -106,7 +103,7 @@ namespace CapaDatos
         }
 
 
-        public string Actualizar(CDEntradaInventario objSalidaAct)
+        public string Actualizar(CDEntradaInventario objEntradaInventarioAct)
         {
             string mensaje = "";
             //creamos un nuevo objeto de tipo SqlConnection
@@ -116,29 +113,19 @@ namespace CapaDatos
             {
                 //asignamos a sqlCon la conexión con las base de datos a traves de la clase que creamos
                 sqlCon.ConnectionString = Conexion.miconexion;
-                //Escribo el nombre del procedimiento almacenado que utilizaré, en este caso SuplidorInsertar
+
                 SqlCommand micomando = new SqlCommand("EntradaInventarioActualizar", sqlCon);
                 sqlCon.Open(); //Abro la conexión
                                //indico que se ejecutara un procedimiento almacenado
                 micomando.CommandType = CommandType.StoredProcedure;
 
-                /*Envío los parámetros al procedimiento almacenado.
-                - Los nombres que aparece con el signo @ delante son los parámetros que hemos
-                creado en el procedimiento almacenado de la base de datos y debemos escribirlos tal cual
-               aparecen en dicho procedimiento almacenado (respetar mayúsculas y mnúsculas).
-                - Los nombres que aparecen al lado son las propiedades del objeto objSuplidor que se pasará
-                como parámetro con los valores deseados. Puede usarse como lo declaramos en la clase
-               (usando el prefijo ( d ), por ejemplo: dSuplidor, o bien , hacerlo como se declaran en los métodos Get y
-               Set.
-                */
-                micomando.Parameters.AddWithValue("@pFechaSalida", objSalidaAct.FechaSalida);
-                micomando.Parameters.AddWithValue("@pCantidad", objSalidaAct.Cantidad);
-                micomando.Parameters.AddWithValue("@pEstado", objSalidaAct.IDProducto);
-                micomando.Parameters.AddWithValue("@pIDProducto", objSalidaAct.IDProducto);
+                micomando.Parameters.AddWithValue("@pIDEntrada", objEntradaInventarioAct.IDEntrada);
+                micomando.Parameters.AddWithValue("@pFechaEntrada", objEntradaInventarioAct.FechaEntrada);
+                micomando.Parameters.AddWithValue("@pCantidad", objEntradaInventarioAct.Cantidad);
+                micomando.Parameters.AddWithValue("@pIDProducto", objEntradaInventarioAct.IDProducto);
+                micomando.Parameters.AddWithValue("@pIDEmpleado", objEntradaInventarioAct.IDEmpleado);
+                micomando.Parameters.AddWithValue("@pIDEstado", objEntradaInventarioAct.IDEstado);
 
-                /*Ejecuto la instrucción. Si se devuelve el valor 1 significa que todo funcionó correctamente de lo
-                * contrario se devuelve el mensaje indicando que fue incorrecto.
-                */
                 mensaje = micomando.ExecuteNonQuery() == 1 ? "Inserción de datos completada correctamente!" :
                 "No se pudo actualizar correctamente los nuevos datos!";
             }
@@ -157,9 +144,9 @@ namespace CapaDatos
         }
 
         //Método para consultar datos filtrados de la tabla. Se recibe el valor del parámetro
-        public DataTable SalidaConsultar(String miparametro)
+        public DataTable EntradaConsultar(String miparametro)
         {
-            DataTable dt = new DataTable(); //Se Crea DataTable que tomará los datos de los Suplidores
+            DataTable dt = new DataTable();
             SqlDataReader leerDatos; //Creamos el DataReader
             try
             {
@@ -180,6 +167,5 @@ namespace CapaDatos
             return dt; ////Se retorna el DataTable segun lo ocurrido arriba
         } //Fin del método MostrarConFiltro
 
-
-    }//fin
+    } //fin
 }

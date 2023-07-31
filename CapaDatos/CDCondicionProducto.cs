@@ -26,6 +26,8 @@ namespace CapaDatos
             this.dSigla = pSigla;
         }
 
+        #region
+
         public int IDCondicion
         {
             get { return dIDCondicion; }
@@ -43,6 +45,8 @@ namespace CapaDatos
             get { return dSigla; }
             set { dSigla = value; }
         }
+
+        #endregion
 
         public string Insertar(CDCondicionProducto objCondicion)
         {
@@ -105,7 +109,7 @@ namespace CapaDatos
 
         public DataTable CondicionConsultar(String miparametro)
         {
-            DataTable dt = new DataTable(); //Se Crea DataTable que tomará los datos de los Suplidores
+            DataTable dt = new DataTable();
             SqlDataReader leerDatos; //Creamos el DataReader
             try
             {

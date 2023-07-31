@@ -11,9 +11,9 @@ namespace CapaDatos
 {
     public class CDProducto
     {
-        private int dCodigoProducto, dCantidad, dIDEstado, dIDCategoria;
-        private float dPrecioUnitario;
-        private string dNombre, dDescripcion;
+        private int dCodigoProducto, dCantidad, dIDEstado, dIDCategoria, dIDCondicion;
+        private decimal dPrecioUnitario;
+        private string dNombre, dDescripcion, dImagen;
 
 
         public CDProducto()
@@ -21,15 +21,17 @@ namespace CapaDatos
 
         }
 
-        public CDProducto(int pCodigoProducto, int pCantidad, int pIDEstado, int pIDCategoria, string pNombre, string pDescripcion, float pPrecioUnitario)
+        public CDProducto(int pCodigoProducto, string pNombre, string pDescripcion, string pImagen, int pCantidad, decimal pPrecioUnitario, int pIDEstado, int pIDCategoria, int pIDCondicion)
         {
             this.dCodigoProducto = pCodigoProducto;
-            this.dCantidad = pCantidad;
-            this.dIDEstado = pIDEstado;
-            this.dIDCategoria = pIDCategoria;
             this.dNombre = pNombre;
             this.dDescripcion = pDescripcion;
+            this.dImagen = pImagen;
+            this.dCantidad = pCantidad;
             this.dPrecioUnitario = pPrecioUnitario;
+            this.dIDEstado = pIDEstado;
+            this.dIDCategoria = pIDCategoria;
+            this.dIDCondicion = pIDCondicion;
         }
 
         #region
@@ -38,10 +40,31 @@ namespace CapaDatos
             get { return dCodigoProducto; }
             set { dCodigoProducto = value; }
         }
+        public string Nombre
+        {
+            get { return dNombre; }
+            set { dNombre = value; }
+        }
+
+        public string Descripcion
+        {
+            get { return dDescripcion; }
+            set { dDescripcion = value; }
+        }
+        public string Imagen
+        {
+            get { return dImagen; }
+            set { dImagen = value; }
+        }
         public int Cantidad
         {
             get { return dCantidad; }
             set { dCantidad = value; }
+        }
+        public decimal PrecioUnitario
+        {
+            get { return dPrecioUnitario; }
+            set { dPrecioUnitario = value; }
         }
         public int IDEstado
         {
@@ -53,22 +76,14 @@ namespace CapaDatos
             get { return dIDCategoria; }
             set { dIDCategoria = value; }
         }
-        public string Descripcion
+        public int IDCondicion
         {
-            get { return dDescripcion; }
-            set { dDescripcion = value; }
+            get { return dIDCondicion; }
+            set { dIDCondicion = value; }
         }
-        public string Nombre
-        {
-            get { return dNombre; }
-            set { dNombre = value; }
-        }
-        public float PrecioUnitario
-        {
-            get { return dPrecioUnitario; }
-            set { dPrecioUnitario = value; }
-        }
+
         #endregion
+
         public string Insertar(CDProducto objProducto)
         {
             string mensaje = "";
@@ -82,14 +97,15 @@ namespace CapaDatos
                 SqlCommand micomando = new SqlCommand("ProductoInsertar", sqlCon);
                 sqlCon.Open();
                 micomando.CommandType = CommandType.StoredProcedure;
-                micomando.Parameters.AddWithValue("@pCodigoProducto", objProducto.CodigoProducto);
-                micomando.Parameters.AddWithValue("@pCantidad", objProducto.Cantidad);
-                micomando.Parameters.AddWithValue("@pIDEstado", objProducto.IDEstado);
-                micomando.Parameters.AddWithValue("@pIDCategoria", objProducto.IDCategoria);
+
                 micomando.Parameters.AddWithValue("@pNombre", objProducto.Nombre);
                 micomando.Parameters.AddWithValue("@pDescripcion", objProducto.Descripcion);
+                micomando.Parameters.AddWithValue("@pImagen", objProducto.Imagen);
+                micomando.Parameters.AddWithValue("@pCantidad", objProducto.Cantidad);
                 micomando.Parameters.AddWithValue("@pPrecioUnitario", objProducto.PrecioUnitario);
-
+                micomando.Parameters.AddWithValue("@pIDEstado", objProducto.IDEstado);
+                micomando.Parameters.AddWithValue("@pIDCategoria", objProducto.IDCategoria);
+                micomando.Parameters.AddWithValue("@pIDCondicion", objProducto.IDCondicion);
 
                 mensaje = micomando.ExecuteNonQuery() == 1 ? "Inserción de datos completada correctamente!" :
                 "No se pudo insertar correctamente los nuevos datos!";
@@ -108,7 +124,7 @@ namespace CapaDatos
             return mensaje;
         }
 
-        public string Actualizar(CDProducto objProducto)
+        public string Actualizar(CDProducto objProductoAct)
         {
             string mensaje = "";
             SqlConnection sqlCon = new SqlConnection();
@@ -118,13 +134,15 @@ namespace CapaDatos
                 SqlCommand micomando = new SqlCommand("ProductoActualizar", sqlCon);
                 sqlCon.Open();
                 micomando.CommandType = CommandType.StoredProcedure;
-                micomando.Parameters.AddWithValue("@pCodigoProducto", objProducto.CodigoProducto);
-                micomando.Parameters.AddWithValue("@pCantidad", objProducto.Cantidad);
-                micomando.Parameters.AddWithValue("@pIDCategoria", objProducto.IDCategoria);
-                micomando.Parameters.AddWithValue("@pNombre", objProducto.Nombre);
-                micomando.Parameters.AddWithValue("@pDescripcion", objProducto.Descripcion);
-                micomando.Parameters.AddWithValue("@pIDEstado", objProducto.IDEstado);
-                micomando.Parameters.AddWithValue("@pPrecioUnitario", objProducto.PrecioUnitario);
+                micomando.Parameters.AddWithValue("@pIDProducto", objProductoAct.CodigoProducto);
+                micomando.Parameters.AddWithValue("@pNombre", objProductoAct.Nombre);
+                micomando.Parameters.AddWithValue("@pDescripcion", objProductoAct.Descripcion);
+                micomando.Parameters.AddWithValue("@pImagen", objProductoAct.Imagen);
+                micomando.Parameters.AddWithValue("@pCantidad", objProductoAct.Cantidad);
+                micomando.Parameters.AddWithValue("@pPrecioUnitario", objProductoAct.PrecioUnitario);
+                micomando.Parameters.AddWithValue("@pIDEstado", objProductoAct.IDEstado);
+                micomando.Parameters.AddWithValue("@pIDCategoria", objProductoAct.IDCategoria);
+                micomando.Parameters.AddWithValue("@pIDCondicion", objProductoAct.IDCondicion);
 
                 mensaje = micomando.ExecuteNonQuery() == 1 ? "Datos actualizados correctamente!" :
                 "No se pudo actualizar correctamente los datos!";

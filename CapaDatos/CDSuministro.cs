@@ -13,7 +13,7 @@ namespace CapaDatos
     {
         public DataTable SuministroConsultar(String miparametro)
         {
-            DataTable dt = new DataTable(); //Se Crea DataTable que tomará los datos de los Suplidores
+            DataTable dt = new DataTable();
             SqlDataReader leerDatos; //Creamos el DataReader
             try
             {
@@ -32,8 +32,6 @@ namespace CapaDatos
                 dt = null; //Si ocurre algun error se anula el DataTable
             }
             return dt; ////Se retorna el DataTable segun lo ocurrido arriba
-        } //Fin del método MostrarConFiltro
-
-
+        } //Fin del método MostrarConFiltr
     }
 }

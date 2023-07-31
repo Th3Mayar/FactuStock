@@ -10,8 +10,8 @@ namespace CapaDatos
 {
     public class CDCliente
     {
-        private int dIDCliente;
-        private string dRNC, dNombre, dApellido, dContacto, dDireccion, dEstado;
+        private int dIDCliente, dIDEstado;
+        private string dCedula, dNombre, dApellido, dContacto, dDireccion;
         private DateTime dFechaNacimiento;
 
         public CDCliente()
@@ -19,17 +19,19 @@ namespace CapaDatos
 
         }
 
-        public CDCliente(int pIDCliente, string pRNC, string pNombre, string pApellido, string pContacto, string pDireccion, DateTime pFechaNacimiento, string pEstado)
+        public CDCliente(int pIDCliente, string pCedula, string pNombre, string pApellido, string pContacto, string pDireccion, DateTime pFechaNacimiento, int pIDEstado)
         {
             this.dIDCliente = pIDCliente;
-            this.dRNC = pRNC;
+            this.dCedula = pCedula;
             this.dNombre = pNombre;
             this.dApellido = pApellido;
             this.dContacto = pContacto;
             this.dDireccion = pDireccion;
             this.dFechaNacimiento = pFechaNacimiento;
-            this.dEstado = pEstado;
+            this.dIDEstado = pIDEstado;
         }
+
+        #region
 
         public int IDCliente
         {
@@ -37,10 +39,10 @@ namespace CapaDatos
             set { dIDCliente = value; }
         }
 
-        public string RNC
+        public string Cedula
         {
-            get { return dRNC; }
-            set { dRNC = value; }
+            get { return dCedula; }
+            set { dCedula = value; }
         }
 
         public string Nombre
@@ -73,11 +75,13 @@ namespace CapaDatos
             set { dFechaNacimiento = value; }
         }
 
-        public string Estado
+        public int IDEstado
         {
-            get { return dEstado; }
-            set { dEstado = value; }
+            get { return dIDEstado; }
+            set { dIDEstado = value; }
         }
+
+        #endregion
 
         public string Insertar(CDCliente objCliente)
         {
@@ -89,13 +93,13 @@ namespace CapaDatos
                 SqlCommand micomando = new SqlCommand("ClienteInsertar", sqlCon);
                 micomando.CommandType = CommandType.StoredProcedure;
 
-                micomando.Parameters.AddWithValue("@pRNC", objCliente.RNC);
+                micomando.Parameters.AddWithValue("@pCedula", objCliente.dCedula);
                 micomando.Parameters.AddWithValue("@pNombre", objCliente.Nombre);
                 micomando.Parameters.AddWithValue("@pApellido", objCliente.Apellido);
                 micomando.Parameters.AddWithValue("@pContacto", objCliente.Contacto);
                 micomando.Parameters.AddWithValue("@pDireccion", objCliente.Direccion);
                 micomando.Parameters.AddWithValue("@pFechaNacimiento", objCliente.FechaNacimiento);
-                micomando.Parameters.AddWithValue("@pEstado", objCliente.Estado);
+                micomando.Parameters.AddWithValue("@pEstado", objCliente.IDEstado);
 
                 sqlCon.Open();
                 mensaje = micomando.ExecuteNonQuery() == 1 ? "Inserción de datos completada correctamente!" :
@@ -124,13 +128,12 @@ namespace CapaDatos
                 micomando.CommandType = CommandType.StoredProcedure;
 
                 micomando.Parameters.AddWithValue("@pIDCliente", objClienteAct.IDCliente);
-                micomando.Parameters.AddWithValue("@pRNC", objClienteAct.RNC);
                 micomando.Parameters.AddWithValue("@pNombre", objClienteAct.Nombre);
                 micomando.Parameters.AddWithValue("@pApellido", objClienteAct.Apellido);
                 micomando.Parameters.AddWithValue("@pContacto", objClienteAct.Contacto);
                 micomando.Parameters.AddWithValue("@pDireccion", objClienteAct.Direccion);
                 micomando.Parameters.AddWithValue("@pFechaNacimiento", objClienteAct.FechaNacimiento);
-                micomando.Parameters.AddWithValue("@pEstado", objClienteAct.Estado);
+                micomando.Parameters.AddWithValue("@pEstado", objClienteAct.IDEstado);
 
                 sqlCon.Open();
                 mensaje = micomando.ExecuteNonQuery() == 1 ? "Actualización de datos completada correctamente!" :
@@ -150,7 +153,7 @@ namespace CapaDatos
 
         public DataTable ClienteConsultar(String miparametro)
         {
-            DataTable dt = new DataTable(); //Se Crea DataTable que tomará los datos de los Suplidores
+            DataTable dt = new DataTable();
             SqlDataReader leerDatos; //Creamos el DataReader
             try
             {
