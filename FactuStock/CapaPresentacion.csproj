@@ -58,6 +58,60 @@
     <Compile Include="ConsultarCategoriaGral.Designer.cs">
       <DependentUpon>ConsultarCategoriaGral.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultarClientesGral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarClientesGral.Designer.cs">
+      <DependentUpon>ConsultarClientesGral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarCondicionesGral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarCondicionesGral.Designer.cs">
+      <DependentUpon>ConsultarCondicionesGral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarEmpleadosGral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarEmpleadosGral.Designer.cs">
+      <DependentUpon>ConsultarEmpleadosGral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarEmpresaGral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarEmpresaGral.Designer.cs">
+      <DependentUpon>ConsultarEmpresaGral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarEntradaInventarioGral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarEntradaInventarioGral.Designer.cs">
+      <DependentUpon>ConsultarEntradaInventarioGral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarProductosGral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarProductosGral.Designer.cs">
+      <DependentUpon>ConsultarProductosGral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarRolGral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarRolGral.Designer.cs">
+      <DependentUpon>ConsultarRolGral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarSalidaInventarioGral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarSalidaInventarioGral.Designer.cs">
+      <DependentUpon>ConsultarSalidaInventarioGral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarSuministroGral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarSuministroGral.Designer.cs">
+      <DependentUpon>ConsultarSuministroGral.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsultarVentaDetalleGral.cs">
       <SubType>Form</SubType>
     </Compile>
