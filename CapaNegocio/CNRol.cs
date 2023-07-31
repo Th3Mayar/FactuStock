@@ -12,7 +12,7 @@ namespace CapaNegocio
 {
     public class CNRol
     {
-        private object objRol;
+        ///private object objRol;
 
         //Preparamos los datos para insertar un nuevo Suplidor. A los parametros recibidos les pongo el prefijo p
         public static string Insertar(int pIDRol, string pRol, string pSiglas)

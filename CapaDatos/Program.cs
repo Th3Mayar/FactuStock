@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace CapaPresentacion
+namespace FactuStock
 {
-    static class Program
+    class Program
     {
         /// <summary>
         /// Punto de entrada principal para la aplicación.
@@ -14,9 +14,7 @@ namespace CapaPresentacion
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            
         }
     }
 }

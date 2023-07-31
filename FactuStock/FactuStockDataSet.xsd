@@ -4,7 +4,7 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="FactuStockConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FactuStockConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CapaPresentacion.Properties.Settings.GlobalReference.Default.FactuStockConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="FactuStockConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FactuStockConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.FactuStock.Properties.Settings.GlobalReference.Default.FactuStockConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CategoriaProductoTableAdapter" GeneratorDataComponentClassName="CategoriaProductoTableAdapter" Name="CategoriaProducto" UserDataComponentName="CategoriaProductoTableAdapter">

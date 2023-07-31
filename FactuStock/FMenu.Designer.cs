@@ -1,17 +1,17 @@
 ﻿
-namespace CapaPresentacion
+namespace FactuStock
 {
     partial class FMenu
     {
         /// <summary>
-        /// Variable del diseñador necesaria.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Limpiar los recursos que se estén usando.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,6 +20,7 @@ namespace CapaPresentacion
             }
             base.Dispose(disposing);
         }
+
 
         #region Código generado por el Diseñador de Windows Forms
 
@@ -31,16 +32,18 @@ namespace CapaPresentacion
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FMenu));
             this.pMenu = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCerrarMenu = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.btnConsultasReportes = new System.Windows.Forms.Button();
+            this.btnConsultasReportesMenu = new System.Windows.Forms.Button();
             this.btnProcesos = new System.Windows.Forms.Button();
-            this.btnMantenimientos = new System.Windows.Forms.Button();
-            this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnMantenimientosMenu = new System.Windows.Forms.Button();
             this.FactuStockLogo = new System.Windows.Forms.PictureBox();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.pLateralIzquierdo = new System.Windows.Forms.Panel();
             this.pLateralDerecho = new System.Windows.Forms.Panel();
             this.pMantenimientos = new System.Windows.Forms.Panel();
@@ -50,7 +53,7 @@ namespace CapaPresentacion
             this.button13 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btnEstadoMenu = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.btnCategoriaProducto = new System.Windows.Forms.Button();
             this.pProcesos = new System.Windows.Forms.Panel();
@@ -82,6 +85,7 @@ namespace CapaPresentacion
             this.button19 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.pMenu.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FactuStockLogo)).BeginInit();
             this.pMantenimientos.SuspendLayout();
@@ -95,42 +99,65 @@ namespace CapaPresentacion
             // pMenu
             // 
             this.pMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pMenu.Controls.Add(this.panel1);
             this.pMenu.Controls.Add(this.pictureBox1);
             this.pMenu.Controls.Add(this.button7);
             this.pMenu.Controls.Add(this.button6);
             this.pMenu.Controls.Add(this.button5);
             this.pMenu.Controls.Add(this.button4);
-            this.pMenu.Controls.Add(this.btnConsultasReportes);
+            this.pMenu.Controls.Add(this.btnConsultasReportesMenu);
             this.pMenu.Controls.Add(this.btnProcesos);
-            this.pMenu.Controls.Add(this.btnMantenimientos);
-            this.pMenu.Controls.Add(this.btnCerrar);
+            this.pMenu.Controls.Add(this.btnMantenimientosMenu);
             this.pMenu.Controls.Add(this.FactuStockLogo);
+            this.pMenu.Controls.Add(this.btnCerrar);
             this.pMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pMenu.Location = new System.Drawing.Point(0, 0);
             this.pMenu.Name = "pMenu";
             this.pMenu.Size = new System.Drawing.Size(1200, 70);
             this.pMenu.TabIndex = 0;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnCerrarMenu);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(1130, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(68, 68);
+            this.panel1.TabIndex = 29;
+            // 
+            // btnCerrarMenu
+            // 
+            this.btnCerrarMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrarMenu.BackgroundImage")));
+            this.btnCerrarMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrarMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnCerrarMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarMenu.Location = new System.Drawing.Point(39, 0);
+            this.btnCerrarMenu.Name = "btnCerrarMenu";
+            this.btnCerrarMenu.Size = new System.Drawing.Size(29, 28);
+            this.btnCerrarMenu.TabIndex = 0;
+            this.btnCerrarMenu.UseVisualStyleBackColor = true;
+            this.btnCerrarMenu.Click += new System.EventHandler(this.btnCerrarMenu_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(109, 26);
+            this.pictureBox1.Location = new System.Drawing.Point(110, 25);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(20, 20);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabIndex = 28;
             this.pictureBox1.TabStop = false;
             // 
             // button7
             // 
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(1017, 21);
+            this.button7.Location = new System.Drawing.Point(1018, 20);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(140, 30);
-            this.button7.TabIndex = 8;
+            this.button7.TabIndex = 27;
             this.button7.Text = "Salida";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.MouseEnter += new System.EventHandler(this.btnMouseEnter);
@@ -142,10 +169,10 @@ namespace CapaPresentacion
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button6.Location = new System.Drawing.Point(871, 21);
+            this.button6.Location = new System.Drawing.Point(872, 20);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(140, 30);
-            this.button6.TabIndex = 7;
+            this.button6.TabIndex = 26;
             this.button6.Text = "Ayuda";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.MouseEnter += new System.EventHandler(this.btnMouseEnter);
@@ -157,10 +184,10 @@ namespace CapaPresentacion
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.Location = new System.Drawing.Point(725, 21);
+            this.button5.Location = new System.Drawing.Point(726, 20);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(140, 30);
-            this.button5.TabIndex = 6;
+            this.button5.TabIndex = 25;
             this.button5.Text = "Seguridad";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.MouseEnter += new System.EventHandler(this.btnMouseEnter);
@@ -172,30 +199,30 @@ namespace CapaPresentacion
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.Location = new System.Drawing.Point(579, 21);
+            this.button4.Location = new System.Drawing.Point(580, 20);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(140, 30);
-            this.button4.TabIndex = 5;
+            this.button4.TabIndex = 24;
             this.button4.Text = "Utilidades";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.MouseEnter += new System.EventHandler(this.btnMouseEnter);
             this.button4.MouseLeave += new System.EventHandler(this.btnMouseLeave);
             // 
-            // btnConsultasReportes
+            // btnConsultasReportesMenu
             // 
-            this.btnConsultasReportes.FlatAppearance.BorderSize = 0;
-            this.btnConsultasReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultasReportes.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultasReportes.Image")));
-            this.btnConsultasReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnConsultasReportes.Location = new System.Drawing.Point(404, 21);
-            this.btnConsultasReportes.Name = "btnConsultasReportes";
-            this.btnConsultasReportes.Size = new System.Drawing.Size(169, 30);
-            this.btnConsultasReportes.TabIndex = 4;
-            this.btnConsultasReportes.Text = "Consultas y Reportes";
-            this.btnConsultasReportes.UseVisualStyleBackColor = true;
-            this.btnConsultasReportes.Click += new System.EventHandler(this.btnConsultasReportes_Click);
-            this.btnConsultasReportes.MouseEnter += new System.EventHandler(this.btnMouseEnter);
-            this.btnConsultasReportes.MouseLeave += new System.EventHandler(this.btnMouseLeave);
+            this.btnConsultasReportesMenu.FlatAppearance.BorderSize = 0;
+            this.btnConsultasReportesMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultasReportesMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultasReportesMenu.Image")));
+            this.btnConsultasReportesMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnConsultasReportesMenu.Location = new System.Drawing.Point(405, 20);
+            this.btnConsultasReportesMenu.Name = "btnConsultasReportesMenu";
+            this.btnConsultasReportesMenu.Size = new System.Drawing.Size(169, 30);
+            this.btnConsultasReportesMenu.TabIndex = 23;
+            this.btnConsultasReportesMenu.Text = "Consultas y Reportes";
+            this.btnConsultasReportesMenu.UseVisualStyleBackColor = true;
+            this.btnConsultasReportesMenu.MouseEnter += new System.EventHandler(this.btnMouseEnter);
+            this.btnConsultasReportesMenu.MouseLeave += new System.EventHandler(this.btnMouseLeave);
+            this.btnConsultasReportesMenu.MouseHover += new System.EventHandler(this.btnConsultasReportesMenu_Click);
             // 
             // btnProcesos
             // 
@@ -203,35 +230,46 @@ namespace CapaPresentacion
             this.btnProcesos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProcesos.Image = ((System.Drawing.Image)(resources.GetObject("btnProcesos.Image")));
             this.btnProcesos.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnProcesos.Location = new System.Drawing.Point(258, 21);
+            this.btnProcesos.Location = new System.Drawing.Point(259, 20);
             this.btnProcesos.Name = "btnProcesos";
             this.btnProcesos.Size = new System.Drawing.Size(140, 30);
-            this.btnProcesos.TabIndex = 3;
+            this.btnProcesos.TabIndex = 22;
             this.btnProcesos.Text = "Procesos";
             this.btnProcesos.UseVisualStyleBackColor = true;
-            this.btnProcesos.Click += new System.EventHandler(this.btnProcesos_Click);
             this.btnProcesos.MouseEnter += new System.EventHandler(this.btnMouseEnter);
             this.btnProcesos.MouseLeave += new System.EventHandler(this.btnMouseLeave);
+            this.btnProcesos.MouseHover += new System.EventHandler(this.btnProcesos_Click);
             // 
-            // btnMantenimientos
+            // btnMantenimientosMenu
             // 
-            this.btnMantenimientos.FlatAppearance.BorderSize = 0;
-            this.btnMantenimientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMantenimientos.Image = ((System.Drawing.Image)(resources.GetObject("btnMantenimientos.Image")));
-            this.btnMantenimientos.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMantenimientos.Location = new System.Drawing.Point(112, 21);
-            this.btnMantenimientos.Name = "btnMantenimientos";
-            this.btnMantenimientos.Size = new System.Drawing.Size(140, 30);
-            this.btnMantenimientos.TabIndex = 2;
-            this.btnMantenimientos.Text = "Mantenimientos";
-            this.btnMantenimientos.UseVisualStyleBackColor = true;
-            this.btnMantenimientos.Click += new System.EventHandler(this.btnMantenimientos_Click);
-            this.btnMantenimientos.MouseEnter += new System.EventHandler(this.btnMouseEnter);
-            this.btnMantenimientos.MouseLeave += new System.EventHandler(this.btnMouseLeave);
+            this.btnMantenimientosMenu.FlatAppearance.BorderSize = 0;
+            this.btnMantenimientosMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMantenimientosMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMantenimientosMenu.Image")));
+            this.btnMantenimientosMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMantenimientosMenu.Location = new System.Drawing.Point(113, 20);
+            this.btnMantenimientosMenu.Name = "btnMantenimientosMenu";
+            this.btnMantenimientosMenu.Size = new System.Drawing.Size(140, 30);
+            this.btnMantenimientosMenu.TabIndex = 21;
+            this.btnMantenimientosMenu.Text = "Mantenimientos";
+            this.btnMantenimientosMenu.UseVisualStyleBackColor = true;
+            this.btnMantenimientosMenu.Click += new System.EventHandler(this.btnMantenimientosMenu_Click);
+            this.btnMantenimientosMenu.MouseEnter += new System.EventHandler(this.btnMouseEnter);
+            this.btnMantenimientosMenu.MouseLeave += new System.EventHandler(this.btnMouseLeave);
+            this.btnMantenimientosMenu.MouseHover += new System.EventHandler(this.btnMantenimientosMenu_Click);
+            // 
+            // FactuStockLogo
+            // 
+            this.FactuStockLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FactuStockLogo.BackgroundImage")));
+            this.FactuStockLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.FactuStockLogo.Image = ((System.Drawing.Image)(resources.GetObject("FactuStockLogo.Image")));
+            this.FactuStockLogo.Location = new System.Drawing.Point(0, -19);
+            this.FactuStockLogo.Name = "FactuStockLogo";
+            this.FactuStockLogo.Size = new System.Drawing.Size(97, 107);
+            this.FactuStockLogo.TabIndex = 20;
+            this.FactuStockLogo.TabStop = false;
             // 
             // btnCerrar
             // 
-            this.btnCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.BackgroundImage")));
             this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(101)))), ((int)(((byte)(113)))));
@@ -243,18 +281,7 @@ namespace CapaPresentacion
             this.btnCerrar.TabIndex = 1;
             this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCerrar.UseVisualStyleBackColor = true;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
-            // FactuStockLogo
-            // 
-            this.FactuStockLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FactuStockLogo.BackgroundImage")));
-            this.FactuStockLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.FactuStockLogo.Image = ((System.Drawing.Image)(resources.GetObject("FactuStockLogo.Image")));
-            this.FactuStockLogo.Location = new System.Drawing.Point(-1, -18);
-            this.FactuStockLogo.Name = "FactuStockLogo";
-            this.FactuStockLogo.Size = new System.Drawing.Size(97, 107);
-            this.FactuStockLogo.TabIndex = 0;
-            this.FactuStockLogo.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrarMenu_Click);
             // 
             // pLateralIzquierdo
             // 
@@ -281,7 +308,7 @@ namespace CapaPresentacion
             this.pMantenimientos.Controls.Add(this.button13);
             this.pMantenimientos.Controls.Add(this.button12);
             this.pMantenimientos.Controls.Add(this.button11);
-            this.pMantenimientos.Controls.Add(this.button10);
+            this.pMantenimientos.Controls.Add(this.btnEstadoMenu);
             this.pMantenimientos.Controls.Add(this.button9);
             this.pMantenimientos.Controls.Add(this.btnCategoriaProducto);
             this.pMantenimientos.Location = new System.Drawing.Point(112, 70);
@@ -362,17 +389,18 @@ namespace CapaPresentacion
             this.button11.Text = "Rol";
             this.button11.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // btnEstadoMenu
             // 
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button10.Location = new System.Drawing.Point(0, 76);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(193, 30);
-            this.button10.TabIndex = 11;
-            this.button10.Text = "Estado";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btnEstadoMenu.FlatAppearance.BorderSize = 0;
+            this.btnEstadoMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEstadoMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEstadoMenu.Location = new System.Drawing.Point(0, 76);
+            this.btnEstadoMenu.Name = "btnEstadoMenu";
+            this.btnEstadoMenu.Size = new System.Drawing.Size(193, 30);
+            this.btnEstadoMenu.TabIndex = 11;
+            this.btnEstadoMenu.Text = "Estado";
+            this.btnEstadoMenu.UseVisualStyleBackColor = true;
+            this.btnEstadoMenu.Click += new System.EventHandler(this.btnEstadoMenu_Click);
             // 
             // button9
             // 
@@ -397,7 +425,6 @@ namespace CapaPresentacion
             this.btnCategoriaProducto.TabIndex = 9;
             this.btnCategoriaProducto.Text = "Categoria Producto";
             this.btnCategoriaProducto.UseVisualStyleBackColor = true;
-            this.btnCategoriaProducto.Click += new System.EventHandler(this.btnCategoriaProducto_Click);
             // 
             // pProcesos
             // 
@@ -778,6 +805,7 @@ namespace CapaPresentacion
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.MouseLeave += new System.EventHandler(this.btnMouseLeave);
             this.pMenu.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FactuStockLogo)).EndInit();
             this.pMantenimientos.ResumeLayout(false);
@@ -793,17 +821,9 @@ namespace CapaPresentacion
         #endregion
 
         private System.Windows.Forms.Panel pMenu;
-        private System.Windows.Forms.PictureBox FactuStockLogo;
         private System.Windows.Forms.Panel pLateralIzquierdo;
         private System.Windows.Forms.Panel pLateralDerecho;
         private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.Button btnMantenimientos;
-        private System.Windows.Forms.Button btnConsultasReportes;
-        private System.Windows.Forms.Button btnProcesos;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel pMantenimientos;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button15;
@@ -811,13 +831,12 @@ namespace CapaPresentacion
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btnEstadoMenu;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button btnCategoriaProducto;
         private System.Windows.Forms.Panel pProcesos;
         private System.Windows.Forms.Button button24;
         private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel pConsultasReportes;
         private System.Windows.Forms.Button btnEmpresa;
         private System.Windows.Forms.Button btnProveedor;
@@ -843,6 +862,16 @@ namespace CapaPresentacion
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnConsultasReportesMenu;
+        private System.Windows.Forms.Button btnProcesos;
+        private System.Windows.Forms.Button btnMantenimientosMenu;
+        private System.Windows.Forms.PictureBox FactuStockLogo;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnCerrarMenu;
     }
 }
-

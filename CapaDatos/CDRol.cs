@@ -33,7 +33,7 @@ namespace CapaDatos
             set { dIDRol = value; }
         }
 
-        public string Nombre
+        public string Rol
         {
             get { return dRol; }
             set { dRol = value; }
@@ -57,7 +57,7 @@ namespace CapaDatos
                 SqlCommand miparametro = new SqlCommand("RolInsertar", sqlCon);
                 miparametro.CommandType = CommandType.StoredProcedure;
 
-                miparametro.Parameters.AddWithValue("@pRol", objRol.Nombre);
+                miparametro.Parameters.AddWithValue("@pRol", objRol.Rol);
                 miparametro.Parameters.AddWithValue("@pSiglas", objRol.Siglas);
 
                 sqlCon.Open();
@@ -87,7 +87,7 @@ namespace CapaDatos
                 miparametro.CommandType = CommandType.StoredProcedure;
 
                 miparametro.Parameters.AddWithValue("@pIDRol", objRolAct.IDRol);
-                miparametro.Parameters.AddWithValue("@pRol", objRolAct.Nombre);
+                miparametro.Parameters.AddWithValue("@pRol", objRolAct.Rol);
                 miparametro.Parameters.AddWithValue("@pSiglas", objRolAct.Siglas);
 
                 sqlCon.Open();

@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaNegocio;
 
-namespace CapaPresentacion
+namespace FactuStock
 {
-
     public partial class Login : Form
     {
+        public string user = "", pass = "";
+        CNUsuario objUsuario = new CNUsuario();
+
         public Login()
         {
             InitializeComponent();
@@ -34,6 +36,7 @@ namespace CapaPresentacion
 
             string nombreUsuario = txtUsuario.Text;
             string contrasena = txtPass.Text;
+            objUsuario.ValidateUsuario(nombreUsuario, contrasena);
 
             string esUsuarioValido = "Jose";
             string esPasswordValida = "54321";
@@ -45,7 +48,7 @@ namespace CapaPresentacion
                 formulario.Show();
                 login.Close();
             }
-            else if(nombreUsuario == "" || contrasena == "")
+            else if (nombreUsuario == "" || contrasena == "")
             {
                 mensajeVacio.Visible = true;
             }
@@ -53,6 +56,11 @@ namespace CapaPresentacion
             {
                 mensaje.Visible = true;
             }
+        }
+
+        private void btnSalir_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

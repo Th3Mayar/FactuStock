@@ -8,11 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaPresentacion
+namespace FactuStock
 {
     public partial class FMenu : Form
     {
-
         Panel p = new Panel();
         private int clickCount = 0;
 
@@ -21,7 +20,8 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
-        private void ocultarOpcion(){
+        private void ocultarOpcion()
+        {
             pProcesos.Visible = false;
             pMantenimientos.Visible = false;
             pConsultasReportes.Visible = false;
@@ -37,7 +37,7 @@ namespace CapaPresentacion
             pSubEmpleados.Visible = false;
         }
 
-        private void btnCerrar_Click(object sender, EventArgs e)
+        private void btnCerrarMenu_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("¿Estás seguro de que quieres cerrar sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -47,7 +47,7 @@ namespace CapaPresentacion
             }
             else
             {
-                
+
             }
         }
 
@@ -55,11 +55,11 @@ namespace CapaPresentacion
         {
             Button btn = sender as Button;
             pMenu.Controls.Add(p);
-            p.BackColor = Color.FromArgb(200,179,0);
+            p.BackColor = Color.FromArgb(200, 179, 0);
             p.Size = new Size(140, 5);
-            p.Location = new 
+            p.Location = new
                 Point(btn.Location.X, btn.Location.Y + 40);
-            
+
             if (btn.Width > 140)
             {
                 p.Width = btn.Width;
@@ -70,7 +70,7 @@ namespace CapaPresentacion
             pMenu.Controls.Remove(p);
         }
 
-        private void btnMantenimientos_Click(object sender, EventArgs e)
+        private void btnMantenimientosMenu_Click(object sender, EventArgs e)
         {
             ocultarOpcion();
             clickCount++;
@@ -86,7 +86,7 @@ namespace CapaPresentacion
 
         private void btnProcesos_Click(object sender, EventArgs e)
         {
-            ocultarOpcion();
+           ocultarOpcion();
             clickCount++;
 
             pProcesos.Visible = !pProcesos.Visible;
@@ -98,7 +98,7 @@ namespace CapaPresentacion
             }
         }
 
-        private void btnConsultasReportes_Click(object sender, EventArgs e)
+        private void btnConsultasReportesMenu_Click(object sender, EventArgs e)
         {
             ocultarOpcion();
             clickCount++;
@@ -128,12 +128,12 @@ namespace CapaPresentacion
 
         private void btnCondicion_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnEstado_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnCliente_Click(object sender, EventArgs e)
@@ -166,10 +166,10 @@ namespace CapaPresentacion
             }
         }
 
-        private void btnCategoriaProducto_Click(object sender, EventArgs e)
+        private void btnEstadoMenu_Click(object sender, EventArgs e)
         {
-            ConsultaEstadoGral estadoConsulta = new ConsultaEstadoGral();
-            estadoConsulta.Show();
+            ConsultaEstadoGral consultarEstado = new ConsultaEstadoGral();
+            consultarEstado.Show();
         }
     }
 }
