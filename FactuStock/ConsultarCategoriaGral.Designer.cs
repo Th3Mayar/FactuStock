@@ -1,7 +1,7 @@
 ﻿
 namespace FactuStock
 {
-    partial class ConsultarVentaDetalleGral
+    partial class ConsultarCategoriaGral
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace FactuStock
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultarVentaDetalleGral));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultarCategoriaGral));
             this.pBotones = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.BSalir = new System.Windows.Forms.Button();
@@ -43,7 +43,7 @@ namespace FactuStock
             this.BUltimo = new System.Windows.Forms.Button();
             this.BSiguiente = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.LCantVentaDetalle = new System.Windows.Forms.Label();
+            this.LCantCategoria = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pTitulo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,14 +54,12 @@ namespace FactuStock
             this.tbBuscar = new System.Windows.Forms.TextBox();
             this.DGVDatos = new System.Windows.Forms.DataGridView();
             this.factuStockDataSet = new FactuStock.FactuStockDataSet();
-            this.ventaDetalleConsultarBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ventaDetalleConsultarTableAdapter = new FactuStock.FactuStockDataSetTableAdapters.VentaDetalleConsultarTableAdapter();
-            this.iDVentaDetalleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numFacturaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioVentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoriaProductoConsultarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.categoriaProductoConsultarTableAdapter = new FactuStock.FactuStockDataSetTableAdapters.CategoriaProductoConsultarTableAdapter();
+            this.iDCategoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pBotones.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -70,7 +68,7 @@ namespace FactuStock
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVDatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.factuStockDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ventaDetalleConsultarBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriaProductoConsultarBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pBotones
@@ -79,10 +77,10 @@ namespace FactuStock
             this.pBotones.Controls.Add(this.panel6);
             this.pBotones.Controls.Add(this.panel5);
             this.pBotones.Controls.Add(this.panel4);
-            this.pBotones.Location = new System.Drawing.Point(1, 358);
+            this.pBotones.Location = new System.Drawing.Point(-1, 385);
             this.pBotones.Name = "pBotones";
             this.pBotones.Size = new System.Drawing.Size(627, 62);
-            this.pBotones.TabIndex = 18;
+            this.pBotones.TabIndex = 16;
             // 
             // panel6
             // 
@@ -191,59 +189,59 @@ namespace FactuStock
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.LCantVentaDetalle);
+            this.panel4.Controls.Add(this.LCantCategoria);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Location = new System.Drawing.Point(197, 14);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(211, 36);
+            this.panel4.Size = new System.Drawing.Size(200, 36);
             this.panel4.TabIndex = 13;
             // 
-            // LCantVentaDetalle
+            // LCantCategoria
             // 
-            this.LCantVentaDetalle.AutoSize = true;
-            this.LCantVentaDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LCantVentaDetalle.Location = new System.Drawing.Point(185, 9);
-            this.LCantVentaDetalle.Name = "LCantVentaDetalle";
-            this.LCantVentaDetalle.Size = new System.Drawing.Size(0, 16);
-            this.LCantVentaDetalle.TabIndex = 13;
+            this.LCantCategoria.AutoSize = true;
+            this.LCantCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LCantCategoria.Location = new System.Drawing.Point(168, 9);
+            this.LCantCategoria.Name = "LCantCategoria";
+            this.LCantCategoria.Size = new System.Drawing.Size(0, 16);
+            this.LCantCategoria.TabIndex = 13;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(8, 9);
+            this.label4.Location = new System.Drawing.Point(10, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(173, 16);
+            this.label4.Size = new System.Drawing.Size(153, 16);
             this.label4.TabIndex = 12;
-            this.label4.Text = "Cantidad de Ventas detalle:";
+            this.label4.Text = "Cantidad de Categorias:";
             // 
             // pTitulo
             // 
             this.pTitulo.BackColor = System.Drawing.SystemColors.Control;
             this.pTitulo.Controls.Add(this.label1);
-            this.pTitulo.Location = new System.Drawing.Point(0, 0);
+            this.pTitulo.Location = new System.Drawing.Point(-10, 0);
             this.pTitulo.Name = "pTitulo";
-            this.pTitulo.Size = new System.Drawing.Size(644, 62);
-            this.pTitulo.TabIndex = 17;
+            this.pTitulo.Size = new System.Drawing.Size(636, 62);
+            this.pTitulo.TabIndex = 15;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(170, 18);
+            this.label1.Location = new System.Drawing.Point(210, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(267, 26);
+            this.label1.Size = new System.Drawing.Size(231, 26);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Consultar Ventas Detalle";
+            this.label1.Text = "Consultar Categorias";
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.BConsultar);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(367, 75);
+            this.panel3.Location = new System.Drawing.Point(365, 73);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(131, 25);
-            this.panel3.TabIndex = 22;
+            this.panel3.TabIndex = 19;
             // 
             // BConsultar
             // 
@@ -270,95 +268,89 @@ namespace FactuStock
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(14, 78);
+            this.label2.Location = new System.Drawing.Point(12, 76);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(167, 19);
-            this.label2.TabIndex = 21;
+            this.label2.TabIndex = 18;
             this.label2.Text = "Ingrese el dato a consultar";
             // 
             // tbBuscar
             // 
             this.tbBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbBuscar.Location = new System.Drawing.Point(183, 76);
+            this.tbBuscar.Location = new System.Drawing.Point(181, 74);
             this.tbBuscar.Multiline = true;
             this.tbBuscar.Name = "tbBuscar";
             this.tbBuscar.Size = new System.Drawing.Size(180, 24);
-            this.tbBuscar.TabIndex = 20;
+            this.tbBuscar.TabIndex = 17;
             // 
             // DGVDatos
             // 
+            this.DGVDatos.AllowUserToAddRows = false;
+            this.DGVDatos.AllowUserToDeleteRows = false;
+            this.DGVDatos.AllowUserToOrderColumns = true;
             this.DGVDatos.AutoGenerateColumns = false;
             this.DGVDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDVentaDetalleDataGridViewTextBoxColumn,
-            this.iDProductoDataGridViewTextBoxColumn,
-            this.nombreDataGridViewTextBoxColumn,
-            this.numFacturaDataGridViewTextBoxColumn,
-            this.cantidadDataGridViewTextBoxColumn,
-            this.precioVentaDataGridViewTextBoxColumn});
-            this.DGVDatos.DataSource = this.ventaDetalleConsultarBindingSource;
-            this.DGVDatos.Location = new System.Drawing.Point(18, 121);
+            this.iDCategoriaDataGridViewTextBoxColumn,
+            this.categoriaDataGridViewTextBoxColumn,
+            this.descripcionDataGridViewTextBoxColumn,
+            this.estadoDataGridViewTextBoxColumn});
+            this.DGVDatos.DataSource = this.categoriaProductoConsultarBindingSource;
+            this.DGVDatos.Location = new System.Drawing.Point(16, 115);
             this.DGVDatos.Name = "DGVDatos";
-            this.DGVDatos.Size = new System.Drawing.Size(585, 216);
-            this.DGVDatos.TabIndex = 23;
+            this.DGVDatos.ReadOnly = true;
+            this.DGVDatos.Size = new System.Drawing.Size(588, 251);
+            this.DGVDatos.TabIndex = 20;
+            this.DGVDatos.CurrentCellChanged += new System.EventHandler(this.DGVDatos_CurrentCellChanged);
             // 
             // factuStockDataSet
             // 
             this.factuStockDataSet.DataSetName = "FactuStockDataSet";
             this.factuStockDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // ventaDetalleConsultarBindingSource
+            // categoriaProductoConsultarBindingSource
             // 
-            this.ventaDetalleConsultarBindingSource.DataMember = "VentaDetalleConsultar";
-            this.ventaDetalleConsultarBindingSource.DataSource = this.factuStockDataSet;
+            this.categoriaProductoConsultarBindingSource.DataMember = "CategoriaProductoConsultar";
+            this.categoriaProductoConsultarBindingSource.DataSource = this.factuStockDataSet;
             // 
-            // ventaDetalleConsultarTableAdapter
+            // categoriaProductoConsultarTableAdapter
             // 
-            this.ventaDetalleConsultarTableAdapter.ClearBeforeFill = true;
+            this.categoriaProductoConsultarTableAdapter.ClearBeforeFill = true;
             // 
-            // iDVentaDetalleDataGridViewTextBoxColumn
+            // iDCategoriaDataGridViewTextBoxColumn
             // 
-            this.iDVentaDetalleDataGridViewTextBoxColumn.DataPropertyName = "IDVentaDetalle";
-            this.iDVentaDetalleDataGridViewTextBoxColumn.HeaderText = "IDVentaDetalle";
-            this.iDVentaDetalleDataGridViewTextBoxColumn.Name = "iDVentaDetalleDataGridViewTextBoxColumn";
-            this.iDVentaDetalleDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDCategoriaDataGridViewTextBoxColumn.DataPropertyName = "IDCategoria";
+            this.iDCategoriaDataGridViewTextBoxColumn.HeaderText = "IDCategoria";
+            this.iDCategoriaDataGridViewTextBoxColumn.Name = "iDCategoriaDataGridViewTextBoxColumn";
+            this.iDCategoriaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // iDProductoDataGridViewTextBoxColumn
+            // categoriaDataGridViewTextBoxColumn
             // 
-            this.iDProductoDataGridViewTextBoxColumn.DataPropertyName = "IDProducto";
-            this.iDProductoDataGridViewTextBoxColumn.HeaderText = "IDProducto";
-            this.iDProductoDataGridViewTextBoxColumn.Name = "iDProductoDataGridViewTextBoxColumn";
+            this.categoriaDataGridViewTextBoxColumn.DataPropertyName = "Categoria";
+            this.categoriaDataGridViewTextBoxColumn.HeaderText = "Categoria";
+            this.categoriaDataGridViewTextBoxColumn.Name = "categoriaDataGridViewTextBoxColumn";
+            this.categoriaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // nombreDataGridViewTextBoxColumn
+            // descripcionDataGridViewTextBoxColumn
             // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // numFacturaDataGridViewTextBoxColumn
+            // estadoDataGridViewTextBoxColumn
             // 
-            this.numFacturaDataGridViewTextBoxColumn.DataPropertyName = "NumFactura";
-            this.numFacturaDataGridViewTextBoxColumn.HeaderText = "NumFactura";
-            this.numFacturaDataGridViewTextBoxColumn.Name = "numFacturaDataGridViewTextBoxColumn";
+            this.estadoDataGridViewTextBoxColumn.DataPropertyName = "Estado";
+            this.estadoDataGridViewTextBoxColumn.HeaderText = "Estado";
+            this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
+            this.estadoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // cantidadDataGridViewTextBoxColumn
-            // 
-            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
-            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
-            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
-            // 
-            // precioVentaDataGridViewTextBoxColumn
-            // 
-            this.precioVentaDataGridViewTextBoxColumn.DataPropertyName = "PrecioVenta";
-            this.precioVentaDataGridViewTextBoxColumn.HeaderText = "PrecioVenta";
-            this.precioVentaDataGridViewTextBoxColumn.Name = "precioVentaDataGridViewTextBoxColumn";
-            // 
-            // ConsultarVentaDetalleGral
+            // ConsultarCategoriaGral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(240)))), ((int)(((byte)(193)))));
-            this.ClientSize = new System.Drawing.Size(627, 420);
+            this.ClientSize = new System.Drawing.Size(626, 447);
             this.Controls.Add(this.DGVDatos);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label2);
@@ -366,9 +358,11 @@ namespace FactuStock
             this.Controls.Add(this.pBotones);
             this.Controls.Add(this.pTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ConsultarVentaDetalleGral";
+            this.Name = "ConsultarCategoriaGral";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ConsultarVentaDetalleGral";
+            this.Text = "ConsultarCategoriaGral";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ConsultarCategoriaGral_FormClosing);
+            this.Load += new System.EventHandler(this.ConsultaEstadoGral_Load);
             this.pBotones.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
@@ -381,7 +375,7 @@ namespace FactuStock
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVDatos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.factuStockDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ventaDetalleConsultarBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriaProductoConsultarBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -401,7 +395,7 @@ namespace FactuStock
         private System.Windows.Forms.Button BUltimo;
         private System.Windows.Forms.Button BSiguiente;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label LCantVentaDetalle;
+        private System.Windows.Forms.Label LCantCategoria;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel pTitulo;
         private System.Windows.Forms.Label label1;
@@ -411,14 +405,12 @@ namespace FactuStock
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbBuscar;
         private System.Windows.Forms.DataGridView DGVDatos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDVentaDetalleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDProductoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numFacturaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precioVentaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource ventaDetalleConsultarBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDCategoriaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoriaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource categoriaProductoConsultarBindingSource;
         private FactuStockDataSet factuStockDataSet;
-        private FactuStockDataSetTableAdapters.VentaDetalleConsultarTableAdapter ventaDetalleConsultarTableAdapter;
+        private FactuStockDataSetTableAdapters.CategoriaProductoConsultarTableAdapter categoriaProductoConsultarTableAdapter;
     }
 }

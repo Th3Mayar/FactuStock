@@ -11,13 +11,13 @@ using CapaNegocio;
 
 namespace FactuStock
 {
-    public partial class ConsultarVentaDetalleGral : Form
+    public partial class ConsultarCategoriaGral : Form
     {
-        public int vidventadetalle = 0, vtieneparametro = 0, indice = 0;
+        public int vidcategoria = 0, vtieneparametro = 0, indice = 0;
         public string valorparametro = "", mensaje = "";
-        CNVentaDetalle objVentaDetalle = new CNVentaDetalle();
+        CNCategoria objCategoria = new CNCategoria();
 
-        public ConsultarVentaDetalleGral()
+        public ConsultarCategoriaGral()
         {
             InitializeComponent();
         }
@@ -40,34 +40,51 @@ namespace FactuStock
             tbBuscar.Focus(); //Se le pasa el cursos al textbox
         }
 
+        private void BSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ConsultaEstadoGral_Load(object sender, EventArgs e)
+        {
+            valorparametro = "";
+            vtieneparametro = 0;
+            MostrarDatos(); //Método que llena el DataGrid
+            tbBuscar.Focus(); //El TextBox Buscar recibe el cursor
+
+        }
+
         private void MostrarDatos()
         {
             // Se toma el texto que se haya introducido en el textbox para usarlo como parámetro
             string valorparametro = tbBuscar.Text.Trim();
             //Si el procedimiento almacenado devuelve algún valor se ajusta el ancho de las columnas del DataGridView
-            if (objVentaDetalle.ObtenerVentaDetalle(valorparametro) != null)
+            if (objCategoria.ObtenerCategoria(valorparametro) != null)
             {
-                DGVDatos.DataSource = objVentaDetalle.ObtenerVentaDetalle(valorparametro);
+                DGVDatos.DataSource = objCategoria.ObtenerCategoria(valorparametro);
                 DGVDatos.Columns[0].Width = 80;
                 DGVDatos.Columns[1].Width = 200;
                 DGVDatos.Columns[2].Width = 225;
-                DGVDatos.Columns[3].Width = 100;
-                DGVDatos.Columns[4].Width = 125;
-                DGVDatos.Columns[5].Width = 125;
-                DGVDatos.Columns[6].Width = 150;
+                DGVDatos.Columns[3].Width = 100; ;
             }
             else //Si el valor de vtieneparametro es 1 se ejecuta el método que filtra datos según el parámetro
             {
                 MessageBox.Show("No se retornó ningún valor!");
             }
             DGVDatos.Refresh(); //Se refresca el DataGridView
-            LCantVentaDetalle.Text = Convert.ToString(DGVDatos.RowCount); //Se muestra la cantidad de datos
+            LCantCategoria.Text = Convert.ToString(DGVDatos.RowCount); //Se muestra la cantidad de datos
             if (DGVDatos.RowCount <= 0) //Si no se obtienen datos de retorno
             {
                 MessageBox.Show("Ningún dato que mostrar!"); //Se muestra un mensaje de error
             }
 
         } //Fin del método mostra
+
+        private void DGVDatos_CurrentCellChanged(object sender, EventArgs e)
+        {
+            if (DGVDatos.CurrentRow != null) //Si el DataGridView no está vacío
+                indice = DGVDatos.CurrentRow.Index; //El valor de índice será la fila actua
+        }
 
         private void BPrimero_Click(object sender, EventArgs e)
         {
@@ -83,21 +100,7 @@ namespace FactuStock
 
         }
 
-        private void ConsultarVentaGral_Load(object sender, EventArgs e)
-        {
-            valorparametro = "";
-            vtieneparametro = 0;
-            MostrarDatos(); //Método que llena el DataGrid
-            tbBuscar.Focus(); //El TextBox Buscar recibe el cursor
-        }
-
-        private void DGVDatos_CurrentCellChanged(object sender, EventArgs e)
-        {
-            if (DGVDatos.CurrentRow != null) //Si el DataGridView no está vacío
-                indice = DGVDatos.CurrentRow.Index; //El valor de índice será la fila actua
-        }
-
-        private void ConsultarVentaGral_FormClosing(object sender, FormClosingEventArgs e)
+        private void ConsultarCategoriaGral_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Esto le hará salir del formulario! \n Seguro que desea hacerlo?",
                  "Mensaje de FactuStock",
@@ -107,11 +110,6 @@ namespace FactuStock
                 e.Cancel = false;
             else
                 e.Cancel = true;
-        }
-
-        private void BSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void BAnterior_Click(object sender, EventArgs e)

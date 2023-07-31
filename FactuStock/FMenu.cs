@@ -114,16 +114,8 @@ namespace FactuStock
 
         private void btnCategoria_Click(object sender, EventArgs e)
         {
-            clickCount++;
-
-            pSubCategoria.Visible = !pSubCategoria.Visible;
-            pSubCategoria.BackColor = Color.FromArgb(167, 169, 0);
-            pSubCategoria.ForeColor = Color.White;
-            if (clickCount > 1)
-            {
-                ocultarSubOpcion();
-                clickCount = 0;
-            }
+            ConsultarCategoriaGral consultarCategoria = new ConsultarCategoriaGral();
+            consultarCategoria.Show();
         }
 
         private void btnCondicion_Click(object sender, EventArgs e)
@@ -182,6 +174,20 @@ namespace FactuStock
         {
             ConsultarVentaDetalleGral consultarVentaDetalle = new ConsultarVentaDetalleGral();
             consultarVentaDetalle.Show();
+        }
+
+        private void btnCategoriaConsultar_MouseHover(object sender, EventArgs e)
+        {
+            clickCount++;
+
+            pSubCategoria.Visible = !pSubCategoria.Visible;
+            pSubCategoria.BackColor = Color.FromArgb(167, 169, 0);
+            pSubCategoria.ForeColor = Color.White;
+            if (clickCount > 1)
+            {
+                ocultarSubOpcion();
+                clickCount = 0;
+            }
         }
     }
 }

@@ -52,6 +52,12 @@
     <Compile Include="ConsultaEstadoGral.Designer.cs">
       <DependentUpon>ConsultaEstadoGral.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultarCategoriaGral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarCategoriaGral.Designer.cs">
+      <DependentUpon>ConsultarCategoriaGral.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsultarVentaDetalleGral.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ConsultaEstadoGral.resx">
       <DependentUpon>ConsultaEstadoGral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarCategoriaGral.resx">
+      <DependentUpon>ConsultarCategoriaGral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarVentaDetalleGral.resx">
       <DependentUpon>ConsultarVentaDetalleGral.cs</DependentUpon>
