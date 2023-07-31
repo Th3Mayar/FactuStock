@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FactuStock
+namespace CapaPresentacion
 {
-    public partial class Login : Form
+    public partial class cCategoriaGral : Form
     {
-        public Login()
+        public cCategoriaGral()
         {
             InitializeComponent();
         }

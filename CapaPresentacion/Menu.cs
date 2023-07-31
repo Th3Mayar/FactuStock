@@ -165,5 +165,11 @@ namespace CapaPresentacion
                 clickCount = 0;
             }
         }
+
+        private void btnCategoriaProducto_Click(object sender, EventArgs e)
+        {
+            ConsultaEstadoGral estadoConsulta = new ConsultaEstadoGral();
+            estadoConsulta.Show();
+        }
     }
 }

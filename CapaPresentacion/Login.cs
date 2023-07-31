@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using CapaNegocio;
+using CapaNegocio;
 
 namespace CapaPresentacion
 {
@@ -35,7 +35,7 @@ namespace CapaPresentacion
             string nombreUsuario = txtUsuario.Text;
             string contrasena = txtPass.Text;
 
-            string esUsuarioValido = "Roselyn";
+            string esUsuarioValido = "Jose";
             string esPasswordValida = "54321";
 
             if (nombreUsuario == esUsuarioValido && contrasena == esPasswordValida)

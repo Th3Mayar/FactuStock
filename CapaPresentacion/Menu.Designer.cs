@@ -52,7 +52,7 @@ namespace CapaPresentacion
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnCategoriaProducto = new System.Windows.Forms.Button();
             this.pProcesos = new System.Windows.Forms.Panel();
             this.button24 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
@@ -94,6 +94,7 @@ namespace CapaPresentacion
             // 
             // pMenu
             // 
+            this.pMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pMenu.Controls.Add(this.pictureBox1);
             this.pMenu.Controls.Add(this.button7);
             this.pMenu.Controls.Add(this.button6);
@@ -236,9 +237,9 @@ namespace CapaPresentacion
             this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(101)))), ((int)(((byte)(113)))));
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(3)))));
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Location = new System.Drawing.Point(1300, 12);
+            this.btnCerrar.Location = new System.Drawing.Point(1346, 1);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(45, 45);
+            this.btnCerrar.Size = new System.Drawing.Size(17, 20);
             this.btnCerrar.TabIndex = 1;
             this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCerrar.UseVisualStyleBackColor = true;
@@ -273,6 +274,7 @@ namespace CapaPresentacion
             // 
             // pMantenimientos
             // 
+            this.pMantenimientos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pMantenimientos.Controls.Add(this.button16);
             this.pMantenimientos.Controls.Add(this.button15);
             this.pMantenimientos.Controls.Add(this.button14);
@@ -281,8 +283,8 @@ namespace CapaPresentacion
             this.pMantenimientos.Controls.Add(this.button11);
             this.pMantenimientos.Controls.Add(this.button10);
             this.pMantenimientos.Controls.Add(this.button9);
-            this.pMantenimientos.Controls.Add(this.button8);
-            this.pMantenimientos.Location = new System.Drawing.Point(112, 69);
+            this.pMantenimientos.Controls.Add(this.btnCategoriaProducto);
+            this.pMantenimientos.Location = new System.Drawing.Point(112, 70);
             this.pMantenimientos.Name = "pMantenimientos";
             this.pMantenimientos.Size = new System.Drawing.Size(193, 326);
             this.pMantenimientos.TabIndex = 3;
@@ -293,7 +295,7 @@ namespace CapaPresentacion
             this.button16.FlatAppearance.BorderSize = 0;
             this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button16.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button16.Location = new System.Drawing.Point(0, 291);
+            this.button16.Location = new System.Drawing.Point(0, 294);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(193, 30);
             this.button16.TabIndex = 17;
@@ -305,7 +307,7 @@ namespace CapaPresentacion
             this.button15.FlatAppearance.BorderSize = 0;
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button15.Location = new System.Drawing.Point(0, 255);
+            this.button15.Location = new System.Drawing.Point(0, 256);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(193, 30);
             this.button15.TabIndex = 16;
@@ -317,7 +319,7 @@ namespace CapaPresentacion
             this.button14.FlatAppearance.BorderSize = 0;
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button14.Location = new System.Drawing.Point(0, 219);
+            this.button14.Location = new System.Drawing.Point(0, 220);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(193, 30);
             this.button14.TabIndex = 15;
@@ -329,7 +331,7 @@ namespace CapaPresentacion
             this.button13.FlatAppearance.BorderSize = 0;
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button13.Location = new System.Drawing.Point(0, 183);
+            this.button13.Location = new System.Drawing.Point(0, 184);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(193, 30);
             this.button13.TabIndex = 14;
@@ -341,7 +343,7 @@ namespace CapaPresentacion
             this.button12.FlatAppearance.BorderSize = 0;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button12.Location = new System.Drawing.Point(0, 147);
+            this.button12.Location = new System.Drawing.Point(0, 148);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(193, 30);
             this.button12.TabIndex = 13;
@@ -353,7 +355,7 @@ namespace CapaPresentacion
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button11.Location = new System.Drawing.Point(0, 111);
+            this.button11.Location = new System.Drawing.Point(0, 112);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(193, 30);
             this.button11.TabIndex = 12;
@@ -365,7 +367,7 @@ namespace CapaPresentacion
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button10.Location = new System.Drawing.Point(0, 75);
+            this.button10.Location = new System.Drawing.Point(0, 76);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(193, 30);
             this.button10.TabIndex = 11;
@@ -377,32 +379,34 @@ namespace CapaPresentacion
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button9.Location = new System.Drawing.Point(0, 39);
+            this.button9.Location = new System.Drawing.Point(0, 40);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(193, 30);
             this.button9.TabIndex = 10;
             this.button9.Text = "Condicion";
             this.button9.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // btnCategoriaProducto
             // 
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button8.Location = new System.Drawing.Point(0, 3);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(193, 30);
-            this.button8.TabIndex = 9;
-            this.button8.Text = "Categoria Producto";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnCategoriaProducto.FlatAppearance.BorderSize = 0;
+            this.btnCategoriaProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCategoriaProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCategoriaProducto.Location = new System.Drawing.Point(0, 1);
+            this.btnCategoriaProducto.Name = "btnCategoriaProducto";
+            this.btnCategoriaProducto.Size = new System.Drawing.Size(193, 30);
+            this.btnCategoriaProducto.TabIndex = 9;
+            this.btnCategoriaProducto.Text = "Categoria Producto";
+            this.btnCategoriaProducto.UseVisualStyleBackColor = true;
+            this.btnCategoriaProducto.Click += new System.EventHandler(this.btnCategoriaProducto_Click);
             // 
             // pProcesos
             // 
+            this.pProcesos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pProcesos.Controls.Add(this.button24);
             this.pProcesos.Controls.Add(this.button23);
             this.pProcesos.Location = new System.Drawing.Point(257, 70);
             this.pProcesos.Name = "pProcesos";
-            this.pProcesos.Size = new System.Drawing.Size(193, 74);
+            this.pProcesos.Size = new System.Drawing.Size(193, 69);
             this.pProcesos.TabIndex = 18;
             this.pProcesos.Visible = false;
             // 
@@ -423,7 +427,7 @@ namespace CapaPresentacion
             this.button23.FlatAppearance.BorderSize = 0;
             this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button23.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button23.Location = new System.Drawing.Point(0, 38);
+            this.button23.Location = new System.Drawing.Point(0, 37);
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(193, 30);
             this.button23.TabIndex = 10;
@@ -432,6 +436,7 @@ namespace CapaPresentacion
             // 
             // pConsultasReportes
             // 
+            this.pConsultasReportes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pConsultasReportes.Controls.Add(this.btnSuministro);
             this.pConsultasReportes.Controls.Add(this.btnInventario);
             this.pConsultasReportes.Controls.Add(this.btnVentas);
@@ -446,7 +451,7 @@ namespace CapaPresentacion
             this.pConsultasReportes.Controls.Add(this.btnCategoria);
             this.pConsultasReportes.Location = new System.Drawing.Point(403, 70);
             this.pConsultasReportes.Name = "pConsultasReportes";
-            this.pConsultasReportes.Size = new System.Drawing.Size(193, 432);
+            this.pConsultasReportes.Size = new System.Drawing.Size(193, 431);
             this.pConsultasReportes.TabIndex = 19;
             this.pConsultasReportes.Visible = false;
             // 
@@ -601,6 +606,7 @@ namespace CapaPresentacion
             // 
             // pSubCategoria
             // 
+            this.pSubCategoria.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pSubCategoria.Controls.Add(this.button3);
             this.pSubCategoria.Controls.Add(this.button29);
             this.pSubCategoria.Location = new System.Drawing.Point(596, 70);
@@ -626,7 +632,7 @@ namespace CapaPresentacion
             this.button29.FlatAppearance.BorderSize = 0;
             this.button29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button29.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button29.Location = new System.Drawing.Point(0, 39);
+            this.button29.Location = new System.Drawing.Point(0, 41);
             this.button29.Name = "button29";
             this.button29.Size = new System.Drawing.Size(193, 30);
             this.button29.TabIndex = 10;
@@ -635,12 +641,13 @@ namespace CapaPresentacion
             // 
             // pSubClientes
             // 
+            this.pSubClientes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pSubClientes.Controls.Add(this.button17);
             this.pSubClientes.Controls.Add(this.button2);
             this.pSubClientes.Controls.Add(this.button1);
-            this.pSubClientes.Location = new System.Drawing.Point(595, 213);
+            this.pSubClientes.Location = new System.Drawing.Point(595, 212);
             this.pSubClientes.Name = "pSubClientes";
-            this.pSubClientes.Size = new System.Drawing.Size(193, 124);
+            this.pSubClientes.Size = new System.Drawing.Size(193, 114);
             this.pSubClientes.TabIndex = 22;
             this.pSubClientes.Visible = false;
             // 
@@ -649,9 +656,9 @@ namespace CapaPresentacion
             this.button17.FlatAppearance.BorderSize = 0;
             this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button17.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button17.Location = new System.Drawing.Point(30, 80);
+            this.button17.Location = new System.Drawing.Point(0, 81);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(140, 30);
+            this.button17.Size = new System.Drawing.Size(193, 30);
             this.button17.TabIndex = 11;
             this.button17.Text = "Por Direccion";
             this.button17.UseVisualStyleBackColor = true;
@@ -661,9 +668,9 @@ namespace CapaPresentacion
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(30, 44);
+            this.button2.Location = new System.Drawing.Point(3, 43);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(140, 30);
+            this.button2.Size = new System.Drawing.Size(187, 30);
             this.button2.TabIndex = 10;
             this.button2.Text = "Por Estado";
             this.button2.UseVisualStyleBackColor = true;
@@ -673,15 +680,16 @@ namespace CapaPresentacion
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(0, 2);
+            this.button1.Location = new System.Drawing.Point(3, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(193, 30);
+            this.button1.Size = new System.Drawing.Size(187, 30);
             this.button1.TabIndex = 9;
             this.button1.Text = "Datos Generales";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // pSubEmpleados
             // 
+            this.pSubEmpleados.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pSubEmpleados.Controls.Add(this.button21);
             this.pSubEmpleados.Controls.Add(this.button18);
             this.pSubEmpleados.Controls.Add(this.button19);
@@ -697,7 +705,7 @@ namespace CapaPresentacion
             this.button21.FlatAppearance.BorderSize = 0;
             this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button21.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button21.Location = new System.Drawing.Point(0, 109);
+            this.button21.Location = new System.Drawing.Point(0, 112);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(193, 30);
             this.button21.TabIndex = 12;
@@ -709,7 +717,7 @@ namespace CapaPresentacion
             this.button18.FlatAppearance.BorderSize = 0;
             this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button18.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button18.Location = new System.Drawing.Point(0, 74);
+            this.button18.Location = new System.Drawing.Point(0, 75);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(193, 30);
             this.button18.TabIndex = 11;
@@ -721,7 +729,7 @@ namespace CapaPresentacion
             this.button19.FlatAppearance.BorderSize = 0;
             this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button19.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button19.Location = new System.Drawing.Point(0, 38);
+            this.button19.Location = new System.Drawing.Point(0, 39);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(193, 30);
             this.button19.TabIndex = 10;
@@ -733,7 +741,7 @@ namespace CapaPresentacion
             this.button20.FlatAppearance.BorderSize = 0;
             this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button20.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button20.Location = new System.Drawing.Point(0, 2);
+            this.button20.Location = new System.Drawing.Point(0, 3);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(193, 30);
             this.button20.TabIndex = 9;
@@ -805,7 +813,7 @@ namespace CapaPresentacion
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnCategoriaProducto;
         private System.Windows.Forms.Panel pProcesos;
         private System.Windows.Forms.Button button24;
         private System.Windows.Forms.Button button23;
