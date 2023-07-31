@@ -58,7 +58,7 @@ namespace CapaNegocio
             return objEstado.InsertarActualizar(objEstado, accion);
         }*/
 
-        public DataTable ObtenerEstado(string miparametro)
+        public DataTable ObtenerVentaCabecera(string miparametro)
         {
             CDVentaCabecera objEstado = new CDVentaCabecera();
             DataTable dt = new DataTable(); //creamos un nuevo DataTable

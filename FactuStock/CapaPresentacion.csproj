@@ -52,6 +52,12 @@
     <Compile Include="ConsultaEstadoGral.Designer.cs">
       <DependentUpon>ConsultaEstadoGral.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultarVentaGral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarVentaGral.Designer.cs">
+      <DependentUpon>ConsultarVentaGral.cs</DependentUpon>
+    </Compile>
     <Compile Include="FactuStockDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -73,6 +79,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ConsultaEstadoGral.resx">
       <DependentUpon>ConsultaEstadoGral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarVentaGral.resx">
+      <DependentUpon>ConsultarVentaGral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FMenu.resx">
       <DependentUpon>FMenu.cs</DependentUpon>

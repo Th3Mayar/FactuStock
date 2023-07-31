@@ -133,7 +133,8 @@ namespace FactuStock
 
         private void btnEstado_Click(object sender, EventArgs e)
         {
-
+            ConsultaEstadoGral consultarEstado = new ConsultaEstadoGral();
+            consultarEstado.Show();
         }
 
         private void btnCliente_Click(object sender, EventArgs e)
@@ -166,10 +167,15 @@ namespace FactuStock
             }
         }
 
-        private void btnEstadoMenu_Click(object sender, EventArgs e)
+        private void btnEstadoMant_Click(object sender, EventArgs e)
         {
-            ConsultaEstadoGral consultarEstado = new ConsultaEstadoGral();
-            consultarEstado.Show();
+            
+        }
+
+        private void btnVentaCabeceraConsultar_Click(object sender, EventArgs e)
+        {
+            ConsultarVentaGral consultarVenta = new ConsultarVentaGral();
+            consultarVenta.Show();
         }
     }
 }

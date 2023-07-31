@@ -53,13 +53,15 @@ namespace FactuStock
             this.button13 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.btnEstadoMenu = new System.Windows.Forms.Button();
+            this.btnEstadoMant = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.btnCategoriaProducto = new System.Windows.Forms.Button();
             this.pProcesos = new System.Windows.Forms.Panel();
             this.button24 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
             this.pConsultasReportes = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
+            this.btnVentaCabeceraConsultar = new System.Windows.Forms.Button();
             this.btnSuministro = new System.Windows.Forms.Button();
             this.btnInventario = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
@@ -69,7 +71,7 @@ namespace FactuStock
             this.btnEmpleado = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
             this.btnRole = new System.Windows.Forms.Button();
-            this.btnEstado = new System.Windows.Forms.Button();
+            this.btnEstadoConsultar = new System.Windows.Forms.Button();
             this.btnCondicion = new System.Windows.Forms.Button();
             this.btnCategoria = new System.Windows.Forms.Button();
             this.pSubCategoria = new System.Windows.Forms.Panel();
@@ -308,7 +310,7 @@ namespace FactuStock
             this.pMantenimientos.Controls.Add(this.button13);
             this.pMantenimientos.Controls.Add(this.button12);
             this.pMantenimientos.Controls.Add(this.button11);
-            this.pMantenimientos.Controls.Add(this.btnEstadoMenu);
+            this.pMantenimientos.Controls.Add(this.btnEstadoMant);
             this.pMantenimientos.Controls.Add(this.button9);
             this.pMantenimientos.Controls.Add(this.btnCategoriaProducto);
             this.pMantenimientos.Location = new System.Drawing.Point(112, 70);
@@ -389,18 +391,18 @@ namespace FactuStock
             this.button11.Text = "Rol";
             this.button11.UseVisualStyleBackColor = true;
             // 
-            // btnEstadoMenu
+            // btnEstadoMant
             // 
-            this.btnEstadoMenu.FlatAppearance.BorderSize = 0;
-            this.btnEstadoMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEstadoMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEstadoMenu.Location = new System.Drawing.Point(0, 76);
-            this.btnEstadoMenu.Name = "btnEstadoMenu";
-            this.btnEstadoMenu.Size = new System.Drawing.Size(193, 30);
-            this.btnEstadoMenu.TabIndex = 11;
-            this.btnEstadoMenu.Text = "Estado";
-            this.btnEstadoMenu.UseVisualStyleBackColor = true;
-            this.btnEstadoMenu.Click += new System.EventHandler(this.btnEstadoMenu_Click);
+            this.btnEstadoMant.FlatAppearance.BorderSize = 0;
+            this.btnEstadoMant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEstadoMant.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEstadoMant.Location = new System.Drawing.Point(0, 76);
+            this.btnEstadoMant.Name = "btnEstadoMant";
+            this.btnEstadoMant.Size = new System.Drawing.Size(193, 30);
+            this.btnEstadoMant.TabIndex = 11;
+            this.btnEstadoMant.Text = "Estado";
+            this.btnEstadoMant.UseVisualStyleBackColor = true;
+            this.btnEstadoMant.Click += new System.EventHandler(this.btnEstadoMant_Click);
             // 
             // button9
             // 
@@ -464,6 +466,8 @@ namespace FactuStock
             // pConsultasReportes
             // 
             this.pConsultasReportes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pConsultasReportes.Controls.Add(this.button10);
+            this.pConsultasReportes.Controls.Add(this.btnVentaCabeceraConsultar);
             this.pConsultasReportes.Controls.Add(this.btnSuministro);
             this.pConsultasReportes.Controls.Add(this.btnInventario);
             this.pConsultasReportes.Controls.Add(this.btnVentas);
@@ -473,14 +477,39 @@ namespace FactuStock
             this.pConsultasReportes.Controls.Add(this.btnEmpleado);
             this.pConsultasReportes.Controls.Add(this.btnCliente);
             this.pConsultasReportes.Controls.Add(this.btnRole);
-            this.pConsultasReportes.Controls.Add(this.btnEstado);
+            this.pConsultasReportes.Controls.Add(this.btnEstadoConsultar);
             this.pConsultasReportes.Controls.Add(this.btnCondicion);
             this.pConsultasReportes.Controls.Add(this.btnCategoria);
             this.pConsultasReportes.Location = new System.Drawing.Point(403, 70);
             this.pConsultasReportes.Name = "pConsultasReportes";
-            this.pConsultasReportes.Size = new System.Drawing.Size(193, 431);
+            this.pConsultasReportes.Size = new System.Drawing.Size(193, 504);
             this.pConsultasReportes.TabIndex = 19;
             this.pConsultasReportes.Visible = false;
+            // 
+            // button10
+            // 
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button10.Location = new System.Drawing.Point(-1, 470);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(193, 30);
+            this.button10.TabIndex = 22;
+            this.button10.Text = "Venta Detalle";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // btnVentaCabeceraConsultar
+            // 
+            this.btnVentaCabeceraConsultar.FlatAppearance.BorderSize = 0;
+            this.btnVentaCabeceraConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVentaCabeceraConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnVentaCabeceraConsultar.Location = new System.Drawing.Point(-1, 434);
+            this.btnVentaCabeceraConsultar.Name = "btnVentaCabeceraConsultar";
+            this.btnVentaCabeceraConsultar.Size = new System.Drawing.Size(193, 30);
+            this.btnVentaCabeceraConsultar.TabIndex = 21;
+            this.btnVentaCabeceraConsultar.Text = "Venta Cabecera";
+            this.btnVentaCabeceraConsultar.UseVisualStyleBackColor = true;
+            this.btnVentaCabeceraConsultar.Click += new System.EventHandler(this.btnVentaCabeceraConsultar_Click);
             // 
             // btnSuministro
             // 
@@ -592,18 +621,18 @@ namespace FactuStock
             this.btnRole.Text = "Roles";
             this.btnRole.UseVisualStyleBackColor = true;
             // 
-            // btnEstado
+            // btnEstadoConsultar
             // 
-            this.btnEstado.FlatAppearance.BorderSize = 0;
-            this.btnEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEstado.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEstado.Location = new System.Drawing.Point(0, 74);
-            this.btnEstado.Name = "btnEstado";
-            this.btnEstado.Size = new System.Drawing.Size(193, 30);
-            this.btnEstado.TabIndex = 11;
-            this.btnEstado.Text = "Estados";
-            this.btnEstado.UseVisualStyleBackColor = true;
-            this.btnEstado.Click += new System.EventHandler(this.btnEstado_Click);
+            this.btnEstadoConsultar.FlatAppearance.BorderSize = 0;
+            this.btnEstadoConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEstadoConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEstadoConsultar.Location = new System.Drawing.Point(0, 74);
+            this.btnEstadoConsultar.Name = "btnEstadoConsultar";
+            this.btnEstadoConsultar.Size = new System.Drawing.Size(193, 30);
+            this.btnEstadoConsultar.TabIndex = 11;
+            this.btnEstadoConsultar.Text = "Estados";
+            this.btnEstadoConsultar.UseVisualStyleBackColor = true;
+            this.btnEstadoConsultar.Click += new System.EventHandler(this.btnEstado_Click);
             // 
             // btnCondicion
             // 
@@ -831,7 +860,7 @@ namespace FactuStock
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button btnEstadoMenu;
+        private System.Windows.Forms.Button btnEstadoMant;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button btnCategoriaProducto;
         private System.Windows.Forms.Panel pProcesos;
@@ -844,7 +873,7 @@ namespace FactuStock
         private System.Windows.Forms.Button btnEmpleado;
         private System.Windows.Forms.Button btnCliente;
         private System.Windows.Forms.Button btnRole;
-        private System.Windows.Forms.Button btnEstado;
+        private System.Windows.Forms.Button btnEstadoConsultar;
         private System.Windows.Forms.Button btnCondicion;
         private System.Windows.Forms.Button btnCategoria;
         private System.Windows.Forms.Button btnSuministro;
@@ -873,5 +902,7 @@ namespace FactuStock
         private System.Windows.Forms.PictureBox FactuStockLogo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnCerrarMenu;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btnVentaCabeceraConsultar;
     }
 }

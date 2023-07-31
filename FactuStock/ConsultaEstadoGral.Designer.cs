@@ -46,6 +46,8 @@ namespace FactuStock
             this.tbBuscar = new System.Windows.Forms.TextBox();
             this.pBotones = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.BSalir = new System.Windows.Forms.Button();
+            this.BImprimir = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -58,8 +60,6 @@ namespace FactuStock
             this.label4 = new System.Windows.Forms.Label();
             this.factuStockDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.estadoConsultarTableAdapter = new FactuStock.FactuStockDataSetTableAdapters.EstadoConsultarTableAdapter();
-            this.BImprimir = new System.Windows.Forms.Button();
-            this.BSalir = new System.Windows.Forms.Button();
             this.pTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVDatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estadoConsultarBindingSource)).BeginInit();
@@ -214,6 +214,28 @@ namespace FactuStock
             this.panel6.Size = new System.Drawing.Size(201, 62);
             this.panel6.TabIndex = 19;
             // 
+            // BSalir
+            // 
+            this.BSalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BSalir.BackgroundImage")));
+            this.BSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BSalir.Location = new System.Drawing.Point(114, 13);
+            this.BSalir.Name = "BSalir";
+            this.BSalir.Size = new System.Drawing.Size(43, 36);
+            this.BSalir.TabIndex = 19;
+            this.BSalir.UseVisualStyleBackColor = true;
+            this.BSalir.Click += new System.EventHandler(this.BSalir_Click);
+            // 
+            // BImprimir
+            // 
+            this.BImprimir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BImprimir.BackgroundImage")));
+            this.BImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BImprimir.Location = new System.Drawing.Point(9, 14);
+            this.BImprimir.Name = "BImprimir";
+            this.BImprimir.Size = new System.Drawing.Size(43, 36);
+            this.BImprimir.TabIndex = 18;
+            this.BImprimir.UseVisualStyleBackColor = true;
+            this.BImprimir.Click += new System.EventHandler(this.BImprimir_Click);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -326,27 +348,6 @@ namespace FactuStock
             // estadoConsultarTableAdapter
             // 
             this.estadoConsultarTableAdapter.ClearBeforeFill = true;
-            // 
-            // BImprimir
-            // 
-            this.BImprimir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BImprimir.BackgroundImage")));
-            this.BImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BImprimir.Location = new System.Drawing.Point(9, 14);
-            this.BImprimir.Name = "BImprimir";
-            this.BImprimir.Size = new System.Drawing.Size(43, 36);
-            this.BImprimir.TabIndex = 18;
-            this.BImprimir.UseVisualStyleBackColor = true;
-            // 
-            // BSalir
-            // 
-            this.BSalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BSalir.BackgroundImage")));
-            this.BSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BSalir.Location = new System.Drawing.Point(114, 13);
-            this.BSalir.Name = "BSalir";
-            this.BSalir.Size = new System.Drawing.Size(43, 36);
-            this.BSalir.TabIndex = 19;
-            this.BSalir.UseVisualStyleBackColor = true;
-            this.BSalir.Click += new System.EventHandler(this.BSalir_Click);
             // 
             // ConsultaEstadoGral
             // 
