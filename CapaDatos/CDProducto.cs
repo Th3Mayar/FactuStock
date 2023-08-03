@@ -181,7 +181,5 @@ namespace CapaDatos
             }
             return dt; ////Se retorna el DataTable segun lo ocurrido arriba
         } //Fin del método MostrarConFiltro
-
-
     }
 }

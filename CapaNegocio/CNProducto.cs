@@ -12,7 +12,7 @@ namespace CapaNegocio
 {
     public class CNProducto
     {
-        public static string Insertar(int pCodigoProducto, string pNombre, string pDescripcion, int pCantidad, float pPrecioUnitario, int pIDEstado, int pIDCategoria)
+        public static string Insertar(int pCodigoProducto, string pNombre, string pDescripcion, int pCantidad, decimal pPrecioUnitario, int pIDEstado, int pIDCategoria)
         {
             CDProducto objProducto = new CDProducto();
             objProducto.CodigoProducto = pCodigoProducto;
@@ -24,7 +24,7 @@ namespace CapaNegocio
             objProducto.IDCategoria = pIDCategoria;
             return objProducto.Insertar(objProducto);
         }
-        public static string Actualizar(int pCodigoProducto, string pNombre, string pDescripcion, int pCantidad, float pPrecioUnitario, int pIDEstado, int pIDCategoria)
+        public static string Actualizar(int pCodigoProducto, string pNombre, string pDescripcion, int pCantidad, decimal pPrecioUnitario, int pIDEstado, int pIDCategoria)
         {
             CDProducto objProducto = new CDProducto();
             objProducto.CodigoProducto = pCodigoProducto;

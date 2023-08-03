@@ -10,7 +10,7 @@ using CapaDatos;
 
 namespace CapaNegocio
 {
-    class CNCondicionProducto
+    public class CNCondicionProducto
     {
         public static string Insertar(string pDescripcion, string pSigla)
         {

@@ -76,6 +76,7 @@
     <Compile Include="CDVentaCabecera.cs" />
     <Compile Include="CDVentaDetalle.cs" />
     <Compile Include="Conexion.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

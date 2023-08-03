@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D09D92C8-63BD-4C2F-9CF6-428D883BE39D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FactuStock</RootNamespace>
+    <AssemblyName>FactuStock</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConsultaEstadoGral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaEstadoGral.Designer.cs">
+      <DependentUpon>ConsultaEstadoGral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarCategoriaGral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarCategoriaGral.Designer.cs">
+      <DependentUpon>ConsultarCategoriaGral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarClientesGral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarClientesGral.Designer.cs">
+      <DependentUpon>ConsultarClientesGral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarCondicionesGral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarCondicionesGral.Designer.cs">
+      <DependentUpon>ConsultarCondicionesGral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarEmpleadosGral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarEmpleadosGral.Designer.cs">
+      <DependentUpon>ConsultarEmpleadosGral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarEmpresaGral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarEmpresaGral.Designer.cs">
+      <DependentUpon>ConsultarEmpresaGral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarEntradaInventarioGral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarEntradaInventarioGral.Designer.cs">
+      <DependentUpon>ConsultarEntradaInventarioGral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarProductosGral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarProductosGral.Designer.cs">
+      <DependentUpon>ConsultarProductosGral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarProveedorGral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarProveedorGral.Designer.cs">
+      <DependentUpon>ConsultarProveedorGral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarRolGral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarRolGral.Designer.cs">
+      <DependentUpon>ConsultarRolGral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarSalidaInventarioGral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarSalidaInventarioGral.Designer.cs">
+      <DependentUpon>ConsultarSalidaInventarioGral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarSuministroGral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarSuministroGral.Designer.cs">
+      <DependentUpon>ConsultarSuministroGral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarVentaDetalleGral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarVentaDetalleGral.Designer.cs">
+      <DependentUpon>ConsultarVentaDetalleGral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarVentaGral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarVentaGral.Designer.cs">
+      <DependentUpon>ConsultarVentaGral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FactuStockDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FactuStockDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMenu.Designer.cs">
+      <DependentUpon>FMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ConsultaEstadoGral.resx">
+      <DependentUpon>ConsultaEstadoGral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarCategoriaGral.resx">
+      <DependentUpon>ConsultarCategoriaGral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarClientesGral.resx">
+      <DependentUpon>ConsultarClientesGral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarCondicionesGral.resx">
+      <DependentUpon>ConsultarCondicionesGral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarEmpleadosGral.resx">
+      <DependentUpon>ConsultarEmpleadosGral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarEmpresaGral.resx">
+      <DependentUpon>ConsultarEmpresaGral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarEntradaInventarioGral.resx">
+      <DependentUpon>ConsultarEntradaInventarioGral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarProductosGral.resx">
+      <DependentUpon>ConsultarProductosGral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarProveedorGral.resx">
+      <DependentUpon>ConsultarProveedorGral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarRolGral.resx">
+      <DependentUpon>ConsultarRolGral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarSalidaInventarioGral.resx">
+      <DependentUpon>ConsultarSalidaInventarioGral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarSuministroGral.resx">
+      <DependentUpon>ConsultarSuministroGral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarVentaDetalleGral.resx">
+      <DependentUpon>ConsultarVentaDetalleGral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarVentaGral.resx">
+      <DependentUpon>ConsultarVentaGral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMenu.resx">
+      <DependentUpon>FMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="FactuStockDataSet.xsc">
+      <DependentUpon>FactuStockDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FactuStockDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FactuStockDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FactuStockDataSet.xss">
+      <DependentUpon>FactuStockDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
+      <Project>{6fb6549e-5b93-4354-94b6-ea6c65d26378}</Project>
+      <Name>CapaNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
