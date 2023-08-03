@@ -149,6 +149,18 @@
     <EmbeddedResource Include="ConsultarCategoriaGral.resx">
       <DependentUpon>ConsultarCategoriaGral.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarClientesGral.resx">
+      <DependentUpon>ConsultarClientesGral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarCondicionesGral.resx">
+      <DependentUpon>ConsultarCondicionesGral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarEmpleadosGral.resx">
+      <DependentUpon>ConsultarEmpleadosGral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarRolGral.resx">
+      <DependentUpon>ConsultarRolGral.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsultarVentaDetalleGral.resx">
       <DependentUpon>ConsultarVentaDetalleGral.cs</DependentUpon>
     </EmbeddedResource>

@@ -146,7 +146,7 @@ namespace FactuStock
             // 
             this.panel3.Controls.Add(this.BConsultar);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(354, 74);
+            this.panel3.Location = new System.Drawing.Point(356, 74);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(131, 25);
             this.panel3.TabIndex = 12;
@@ -176,7 +176,7 @@ namespace FactuStock
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1, 77);
+            this.label2.Location = new System.Drawing.Point(3, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(167, 19);
             this.label2.TabIndex = 11;
@@ -185,7 +185,7 @@ namespace FactuStock
             // tbBuscar
             // 
             this.tbBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbBuscar.Location = new System.Drawing.Point(170, 75);
+            this.tbBuscar.Location = new System.Drawing.Point(172, 75);
             this.tbBuscar.Multiline = true;
             this.tbBuscar.Name = "tbBuscar";
             this.tbBuscar.Size = new System.Drawing.Size(180, 24);
