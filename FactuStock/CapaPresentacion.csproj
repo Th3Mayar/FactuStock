@@ -94,6 +94,12 @@
     <Compile Include="ConsultarProductosGral.Designer.cs">
       <DependentUpon>ConsultarProductosGral.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultarProveedorGral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarProveedorGral.Designer.cs">
+      <DependentUpon>ConsultarProveedorGral.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsultarRolGral.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,8 +164,26 @@
     <EmbeddedResource Include="ConsultarEmpleadosGral.resx">
       <DependentUpon>ConsultarEmpleadosGral.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarEmpresaGral.resx">
+      <DependentUpon>ConsultarEmpresaGral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarEntradaInventarioGral.resx">
+      <DependentUpon>ConsultarEntradaInventarioGral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarProductosGral.resx">
+      <DependentUpon>ConsultarProductosGral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarProveedorGral.resx">
+      <DependentUpon>ConsultarProveedorGral.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsultarRolGral.resx">
       <DependentUpon>ConsultarRolGral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarSalidaInventarioGral.resx">
+      <DependentUpon>ConsultarSalidaInventarioGral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarSuministroGral.resx">
+      <DependentUpon>ConsultarSuministroGral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarVentaDetalleGral.resx">
       <DependentUpon>ConsultarVentaDetalleGral.cs</DependentUpon>

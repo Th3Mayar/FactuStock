@@ -10,7 +10,7 @@ using CapaDatos;
 
 namespace CapaNegocio
 {
-    class CNSuministro
+    public class CNSuministro
     {
         public DataTable ObtenerSuministro(string miparametro)
         {

@@ -112,23 +112,6 @@ namespace FactuStock
             }
         }
 
-        private void btnCategoria_Click(object sender, EventArgs e)
-        {
-            ConsultarCategoriaGral consultarCategoria = new ConsultarCategoriaGral();
-            consultarCategoria.Show();
-        }
-
-        private void btnCondicion_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnEstado_Click(object sender, EventArgs e)
-        {
-            ConsultaEstadoGral consultarEstado = new ConsultaEstadoGral();
-            consultarEstado.Show();
-        }
-
         private void btnCliente_Click(object sender, EventArgs e)
         {
             clickCount++;
@@ -142,6 +125,9 @@ namespace FactuStock
                 ocultarSubOpcion();
                 clickCount = 0;
             }
+
+            ConsultarClientesGral consultarClientes = new ConsultarClientesGral();
+            consultarClientes.Show();
         }
 
         private void btnEmpleado_Click(object sender, EventArgs e)
@@ -157,11 +143,9 @@ namespace FactuStock
                 ocultarSubOpcion();
                 clickCount = 0;
             }
-        }
 
-        private void btnEstadoMant_Click(object sender, EventArgs e)
-        {
-            
+            ConsultarEmpleadosGral consultarEmpleados = new ConsultarEmpleadosGral();
+            consultarEmpleados.Show();
         }
 
         private void btnVentaCabeceraConsultar_Click(object sender, EventArgs e)
@@ -183,11 +167,72 @@ namespace FactuStock
             pSubCategoria.Visible = !pSubCategoria.Visible;
             pSubCategoria.BackColor = Color.FromArgb(167, 169, 0);
             pSubCategoria.ForeColor = Color.White;
+
             if (clickCount > 1)
             {
                 ocultarSubOpcion();
                 clickCount = 0;
             }
+        }
+
+        private void btnCategoriaConsultar_Click(object sender, EventArgs e)
+        {
+            ConsultarCategoriaGral consultarCategoria = new ConsultarCategoriaGral();
+            consultarCategoria.Show();
+        }
+
+        private void btnCondicionConsultar_Click(object sender, EventArgs e)
+        {
+            ConsultarCondicionesGral consultarCondiciones = new ConsultarCondicionesGral();
+            consultarCondiciones.Show();
+        }
+
+        private void btnEstadoConsultar_Click(object sender, EventArgs e)
+        {
+            ConsultaEstadoGral consultarEstados = new ConsultaEstadoGral();
+            consultarEstados.Show();
+        }
+
+        private void btnRolesConsultar_Click(object sender, EventArgs e)
+        {
+            ConsultarRolGral consultarRoles = new ConsultarRolGral();
+            consultarRoles.Show();
+        }
+
+        private void btnProductosConsultar_Click(object sender, EventArgs e)
+        {
+            ConsultarProductosGral consultarProductos = new ConsultarProductosGral();
+            consultarProductos.Show();
+        }
+
+        private void btnProveedoresConsultar_Click(object sender, EventArgs e)
+        {
+            ConsultarProveedorGral consultarProveedor = new ConsultarProveedorGral();
+            consultarProveedor.Show();
+        }
+
+        private void btnEmpresaConsultar_Click(object sender, EventArgs e)
+        {
+            ConsultarEmpresaGral consultarEmpresa = new ConsultarEmpresaGral();
+            consultarEmpresa.Show();
+        }
+
+        private void btnInventarioConsultar_Click(object sender, EventArgs e)
+        {
+            ConsultarEntradaInventarioGral consultarEntrada = new ConsultarEntradaInventarioGral();
+            consultarEntrada.Show();
+        }
+
+        private void btnSalidaInventarioConsultar_Click(object sender, EventArgs e)
+        {
+            ConsultarSalidaInventarioGral consultarSalida = new ConsultarSalidaInventarioGral();
+            consultarSalida.Show();
+        }
+
+        private void btnSuministroConsultar_Click(object sender, EventArgs e)
+        {
+            ConsultarSuministroGral consultarSuministro = new ConsultarSuministroGral();
+            consultarSuministro.Show();
         }
     }
 }

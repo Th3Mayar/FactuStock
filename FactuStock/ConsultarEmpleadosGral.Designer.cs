@@ -56,8 +56,6 @@ namespace FactuStock
             this.clienteConsultarBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clienteConsultarTableAdapter = new FactuStock.FactuStockDataSetTableAdapters.ClienteConsultarTableAdapter();
             this.DGVDatos = new System.Windows.Forms.DataGridView();
-            this.empleadoConsultarBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.empleadoConsultarTableAdapter = new FactuStock.FactuStockDataSetTableAdapters.EmpleadoConsultarTableAdapter();
             this.iDEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cedulaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,6 +66,8 @@ namespace FactuStock
             this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rolDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.empleadoConsultarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.empleadoConsultarTableAdapter = new FactuStock.FactuStockDataSetTableAdapters.EmpleadoConsultarTableAdapter();
             this.pBotones.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -112,6 +112,7 @@ namespace FactuStock
             this.BSalir.Size = new System.Drawing.Size(43, 36);
             this.BSalir.TabIndex = 19;
             this.BSalir.UseVisualStyleBackColor = true;
+            this.BSalir.Click += new System.EventHandler(this.BSalir_Click);
             // 
             // BImprimir
             // 
@@ -330,15 +331,6 @@ namespace FactuStock
             this.DGVDatos.Size = new System.Drawing.Size(598, 251);
             this.DGVDatos.TabIndex = 26;
             // 
-            // empleadoConsultarBindingSource
-            // 
-            this.empleadoConsultarBindingSource.DataMember = "EmpleadoConsultar";
-            this.empleadoConsultarBindingSource.DataSource = this.factuStockDataSet;
-            // 
-            // empleadoConsultarTableAdapter
-            // 
-            this.empleadoConsultarTableAdapter.ClearBeforeFill = true;
-            // 
             // iDEmpleadoDataGridViewTextBoxColumn
             // 
             this.iDEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "IDEmpleado";
@@ -408,6 +400,15 @@ namespace FactuStock
             this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telefono";
             this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
             this.telefonoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // empleadoConsultarBindingSource
+            // 
+            this.empleadoConsultarBindingSource.DataMember = "EmpleadoConsultar";
+            this.empleadoConsultarBindingSource.DataSource = this.factuStockDataSet;
+            // 
+            // empleadoConsultarTableAdapter
+            // 
+            this.empleadoConsultarTableAdapter.ClearBeforeFill = true;
             // 
             // ConsultarEmpleadosGral
             // 

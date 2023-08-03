@@ -53,15 +53,15 @@ namespace FactuStock
             this.label2 = new System.Windows.Forms.Label();
             this.tbBuscar = new System.Windows.Forms.TextBox();
             this.DGVDatos = new System.Windows.Forms.DataGridView();
-            this.factuStockDataSet = new FactuStock.FactuStockDataSet();
-            this.ventaDetalleConsultarBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ventaDetalleConsultarTableAdapter = new FactuStock.FactuStockDataSetTableAdapters.VentaDetalleConsultarTableAdapter();
             this.iDVentaDetalleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numFacturaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioVentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ventaDetalleConsultarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.factuStockDataSet = new FactuStock.FactuStockDataSet();
+            this.ventaDetalleConsultarTableAdapter = new FactuStock.FactuStockDataSetTableAdapters.VentaDetalleConsultarTableAdapter();
             this.pBotones.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -69,8 +69,8 @@ namespace FactuStock
             this.pTitulo.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVDatos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.factuStockDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventaDetalleConsultarBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.factuStockDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // pBotones
@@ -287,6 +287,9 @@ namespace FactuStock
             // 
             // DGVDatos
             // 
+            this.DGVDatos.AllowUserToAddRows = false;
+            this.DGVDatos.AllowUserToDeleteRows = false;
+            this.DGVDatos.AllowUserToOrderColumns = true;
             this.DGVDatos.AutoGenerateColumns = false;
             this.DGVDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -301,20 +304,6 @@ namespace FactuStock
             this.DGVDatos.Name = "DGVDatos";
             this.DGVDatos.Size = new System.Drawing.Size(585, 216);
             this.DGVDatos.TabIndex = 23;
-            // 
-            // factuStockDataSet
-            // 
-            this.factuStockDataSet.DataSetName = "FactuStockDataSet";
-            this.factuStockDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ventaDetalleConsultarBindingSource
-            // 
-            this.ventaDetalleConsultarBindingSource.DataMember = "VentaDetalleConsultar";
-            this.ventaDetalleConsultarBindingSource.DataSource = this.factuStockDataSet;
-            // 
-            // ventaDetalleConsultarTableAdapter
-            // 
-            this.ventaDetalleConsultarTableAdapter.ClearBeforeFill = true;
             // 
             // iDVentaDetalleDataGridViewTextBoxColumn
             // 
@@ -353,6 +342,20 @@ namespace FactuStock
             this.precioVentaDataGridViewTextBoxColumn.HeaderText = "PrecioVenta";
             this.precioVentaDataGridViewTextBoxColumn.Name = "precioVentaDataGridViewTextBoxColumn";
             // 
+            // ventaDetalleConsultarBindingSource
+            // 
+            this.ventaDetalleConsultarBindingSource.DataMember = "VentaDetalleConsultar";
+            this.ventaDetalleConsultarBindingSource.DataSource = this.factuStockDataSet;
+            // 
+            // factuStockDataSet
+            // 
+            this.factuStockDataSet.DataSetName = "FactuStockDataSet";
+            this.factuStockDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ventaDetalleConsultarTableAdapter
+            // 
+            this.ventaDetalleConsultarTableAdapter.ClearBeforeFill = true;
+            // 
             // ConsultarVentaDetalleGral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -369,6 +372,8 @@ namespace FactuStock
             this.Name = "ConsultarVentaDetalleGral";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConsultarVentaDetalleGral";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ConsultarVentaDetalleGral_FormClosing);
+            this.Load += new System.EventHandler(this.ConsultarVentaDetalleGral_Load);
             this.pBotones.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
@@ -380,8 +385,8 @@ namespace FactuStock
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVDatos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.factuStockDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventaDetalleConsultarBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.factuStockDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

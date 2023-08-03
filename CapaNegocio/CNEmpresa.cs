@@ -10,7 +10,7 @@ using CapaDatos;
 
 namespace CapaNegocio
 {
-    class CNEmpresa
+    public class CNEmpresa
     {
         public static string Insertar(string pNombre, string pRazon_Social, int pTelefono, string pEmail, string pDireccion, decimal pITBIS, string pSlogan, string pImagen)
         {

@@ -53,8 +53,6 @@ namespace FactuStock
                 DGVDatos.Columns[2].Width = 225;
                 DGVDatos.Columns[3].Width = 100;
                 DGVDatos.Columns[4].Width = 125;
-                DGVDatos.Columns[5].Width = 125;
-                DGVDatos.Columns[6].Width = 150;
             }
             else //Si el valor de vtieneparametro es 1 se ejecuta el método que filtra datos según el parámetro
             {
@@ -83,21 +81,18 @@ namespace FactuStock
 
         }
 
-        private void ConsultarVentaGral_Load(object sender, EventArgs e)
-        {
-            valorparametro = "";
-            vtieneparametro = 0;
-            MostrarDatos(); //Método que llena el DataGrid
-            tbBuscar.Focus(); //El TextBox Buscar recibe el cursor
-        }
-
         private void DGVDatos_CurrentCellChanged(object sender, EventArgs e)
         {
             if (DGVDatos.CurrentRow != null) //Si el DataGridView no está vacío
                 indice = DGVDatos.CurrentRow.Index; //El valor de índice será la fila actua
         }
 
-        private void ConsultarVentaGral_FormClosing(object sender, FormClosingEventArgs e)
+        private void BSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ConsultarVentaDetalleGral_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Esto le hará salir del formulario! \n Seguro que desea hacerlo?",
                  "Mensaje de FactuStock",
@@ -109,9 +104,12 @@ namespace FactuStock
                 e.Cancel = true;
         }
 
-        private void BSalir_Click(object sender, EventArgs e)
+        private void ConsultarVentaDetalleGral_Load(object sender, EventArgs e)
         {
-            this.Close();
+            valorparametro = "";
+            vtieneparametro = 0;
+            MostrarDatos(); //Método que llena el DataGrid
+            tbBuscar.Focus(); //El TextBox Buscar recibe el cursor
         }
 
         private void BAnterior_Click(object sender, EventArgs e)

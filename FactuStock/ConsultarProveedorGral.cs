@@ -11,13 +11,13 @@ using CapaNegocio;
 
 namespace FactuStock
 {
-    public partial class ConsultarSalidaInventarioGral : Form
+    public partial class ConsultarProveedorGral : Form
     {
-        public int vidsalida = 0, vtieneparametro = 0, indice = 0;
+        public int vidproveedor = 0, vtieneparametro = 0, indice = 0;
         public string valorparametro = "", mensaje = "";
-        CNSalidaInventario ObjSalida = new CNSalidaInventario();
+        CNProveedor objProveedor = new CNProveedor();
 
-        public ConsultarSalidaInventarioGral()
+        public ConsultarProveedorGral()
         {
             InitializeComponent();
         }
@@ -50,21 +50,24 @@ namespace FactuStock
             // Se toma el texto que se haya introducido en el textbox para usarlo como parámetro
             string valorparametro = tbBuscar.Text.Trim();
             //Si el procedimiento almacenado devuelve algún valor se ajusta el ancho de las columnas del DataGridView
-            if (ObjSalida.ObtenerSalidaInventario(valorparametro) != null)
+            if (objProveedor.ObtenerProveedor(valorparametro) != null)
             {
-                DGVDatos.DataSource = ObjSalida.ObtenerSalidaInventario(valorparametro);
+                DGVDatos.DataSource = objProveedor.ObtenerProveedor(valorparametro);
                 DGVDatos.Columns[0].Width = 80;
                 DGVDatos.Columns[1].Width = 200;
                 DGVDatos.Columns[2].Width = 225;
                 DGVDatos.Columns[3].Width = 100;
                 DGVDatos.Columns[4].Width = 125;
+                DGVDatos.Columns[5].Width = 125;
+                DGVDatos.Columns[6].Width = 150;
+                DGVDatos.Columns[7].Width = 100;
             }
             else //Si el valor de vtieneparametro es 1 se ejecuta el método que filtra datos según el parámetro
             {
                 MessageBox.Show("No se retornó ningún valor!");
             }
             DGVDatos.Refresh(); //Se refresca el DataGridView
-            LCantSalidas.Text = Convert.ToString(DGVDatos.RowCount); //Se muestra la cantidad de datos
+            LCantProveedores.Text = Convert.ToString(DGVDatos.RowCount); //Se muestra la cantidad de datos
             if (DGVDatos.RowCount <= 0) //Si no se obtienen datos de retorno
             {
                 MessageBox.Show("Ningún dato que mostrar!"); //Se muestra un mensaje de error
@@ -92,7 +95,7 @@ namespace FactuStock
 
         }
 
-        private void ConsultarSalidaInventarioGral_FormClosing(object sender, FormClosingEventArgs e)
+        private void ConsultarProveedorGral_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Esto le hará salir del formulario! \n Seguro que desea hacerlo?",
                  "Mensaje de FactuStock",
@@ -104,7 +107,7 @@ namespace FactuStock
                 e.Cancel = true;
         }
 
-        private void ConsultarSalidaInventarioGral_Load(object sender, EventArgs e)
+        private void ConsultarProveedorGral_Load(object sender, EventArgs e)
         {
             valorparametro = "";
             vtieneparametro = 0;

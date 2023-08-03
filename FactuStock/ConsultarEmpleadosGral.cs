@@ -56,6 +56,13 @@ namespace FactuStock
                 DGVDatos.Columns[0].Width = 80;
                 DGVDatos.Columns[1].Width = 200;
                 DGVDatos.Columns[2].Width = 225;
+                DGVDatos.Columns[3].Width = 100;
+                DGVDatos.Columns[4].Width = 125;
+                DGVDatos.Columns[5].Width = 125;
+                DGVDatos.Columns[6].Width = 150;
+                DGVDatos.Columns[7].Width = 100;
+                DGVDatos.Columns[8].Width = 100;
+                DGVDatos.Columns[9].Width = 100;
             }
             else //Si el valor de vtieneparametro es 1 se ejecuta el método que filtra datos según el parámetro
             {

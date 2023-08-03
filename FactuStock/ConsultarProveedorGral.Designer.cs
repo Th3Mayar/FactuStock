@@ -1,7 +1,7 @@
 ﻿
 namespace FactuStock
 {
-    partial class ConsultarClientesGral
+    partial class ConsultarProveedorGral
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace FactuStock
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultarClientesGral));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultarProveedorGral));
             this.pBotones = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.BSalir = new System.Windows.Forms.Button();
@@ -43,7 +43,7 @@ namespace FactuStock
             this.BUltimo = new System.Windows.Forms.Button();
             this.BSiguiente = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.LCantClientes = new System.Windows.Forms.Label();
+            this.LCantProveedores = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pTitulo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,17 +53,17 @@ namespace FactuStock
             this.label2 = new System.Windows.Forms.Label();
             this.tbBuscar = new System.Windows.Forms.TextBox();
             this.DGVDatos = new System.Windows.Forms.DataGridView();
-            this.iDClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cedulaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDProveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreEmpresaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaRegistroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contactoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaNacimientoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.representanteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clienteConsultarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.proveedorConsultarBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.factuStockDataSet = new FactuStock.FactuStockDataSet();
-            this.clienteConsultarTableAdapter = new FactuStock.FactuStockDataSetTableAdapters.ClienteConsultarTableAdapter();
+            this.proveedorConsultarTableAdapter = new FactuStock.FactuStockDataSetTableAdapters.ProveedorConsultarTableAdapter();
             this.pBotones.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -71,7 +71,7 @@ namespace FactuStock
             this.pTitulo.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVDatos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteConsultarBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proveedorConsultarBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.factuStockDataSet)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,10 +81,10 @@ namespace FactuStock
             this.pBotones.Controls.Add(this.panel6);
             this.pBotones.Controls.Add(this.panel5);
             this.pBotones.Controls.Add(this.panel4);
-            this.pBotones.Location = new System.Drawing.Point(0, 384);
+            this.pBotones.Location = new System.Drawing.Point(-1, 384);
             this.pBotones.Name = "pBotones";
             this.pBotones.Size = new System.Drawing.Size(627, 62);
-            this.pBotones.TabIndex = 18;
+            this.pBotones.TabIndex = 16;
             // 
             // panel6
             // 
@@ -193,59 +193,60 @@ namespace FactuStock
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.LCantClientes);
+            this.panel4.Controls.Add(this.LCantProveedores);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(216, 14);
+            this.panel4.Location = new System.Drawing.Point(201, 14);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(185, 36);
+            this.panel4.Size = new System.Drawing.Size(196, 36);
             this.panel4.TabIndex = 13;
             // 
-            // LCantClientes
+            // LCantProveedores
             // 
-            this.LCantClientes.AutoSize = true;
-            this.LCantClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LCantClientes.Location = new System.Drawing.Point(144, 10);
-            this.LCantClientes.Name = "LCantClientes";
-            this.LCantClientes.Size = new System.Drawing.Size(0, 16);
-            this.LCantClientes.TabIndex = 13;
+            this.LCantProveedores.AutoSize = true;
+            this.LCantProveedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LCantProveedores.Location = new System.Drawing.Point(167, 9);
+            this.LCantProveedores.Name = "LCantProveedores";
+            this.LCantProveedores.Size = new System.Drawing.Size(16, 16);
+            this.LCantProveedores.TabIndex = 13;
+            this.LCantProveedores.Text = "2";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(10, 9);
+            this.label4.Location = new System.Drawing.Point(4, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 16);
+            this.label4.Size = new System.Drawing.Size(166, 16);
             this.label4.TabIndex = 12;
-            this.label4.Text = "Cantidad de Clientes:";
+            this.label4.Text = "Cantidad de Proveedores:";
             // 
             // pTitulo
             // 
             this.pTitulo.BackColor = System.Drawing.SystemColors.Control;
             this.pTitulo.Controls.Add(this.label1);
-            this.pTitulo.Location = new System.Drawing.Point(-9, 0);
+            this.pTitulo.Location = new System.Drawing.Point(-10, 0);
             this.pTitulo.Name = "pTitulo";
             this.pTitulo.Size = new System.Drawing.Size(636, 62);
-            this.pTitulo.TabIndex = 17;
+            this.pTitulo.TabIndex = 15;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(225, 18);
+            this.label1.Location = new System.Drawing.Point(206, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(203, 26);
+            this.label1.Size = new System.Drawing.Size(247, 26);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Consultar Clientes";
+            this.label1.Text = "Consultar Proveedores";
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.BConsultar);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(365, 71);
+            this.panel3.Location = new System.Drawing.Point(365, 73);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(131, 25);
-            this.panel3.TabIndex = 22;
+            this.panel3.TabIndex = 19;
             // 
             // BConsultar
             // 
@@ -272,20 +273,20 @@ namespace FactuStock
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 74);
+            this.label2.Location = new System.Drawing.Point(12, 76);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(167, 19);
-            this.label2.TabIndex = 21;
+            this.label2.TabIndex = 18;
             this.label2.Text = "Ingrese el dato a consultar";
             // 
             // tbBuscar
             // 
             this.tbBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbBuscar.Location = new System.Drawing.Point(181, 72);
+            this.tbBuscar.Location = new System.Drawing.Point(181, 74);
             this.tbBuscar.Multiline = true;
             this.tbBuscar.Name = "tbBuscar";
             this.tbBuscar.Size = new System.Drawing.Size(180, 24);
-            this.tbBuscar.TabIndex = 20;
+            this.tbBuscar.TabIndex = 17;
             // 
             // DGVDatos
             // 
@@ -295,49 +296,41 @@ namespace FactuStock
             this.DGVDatos.AutoGenerateColumns = false;
             this.DGVDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDClienteDataGridViewTextBoxColumn,
-            this.cedulaDataGridViewTextBoxColumn,
-            this.nombreDataGridViewTextBoxColumn,
-            this.apellidoDataGridViewTextBoxColumn,
+            this.iDProveedorDataGridViewTextBoxColumn,
+            this.nombreEmpresaDataGridViewTextBoxColumn,
+            this.fechaRegistroDataGridViewTextBoxColumn,
             this.contactoDataGridViewTextBoxColumn,
+            this.telefonoDataGridViewTextBoxColumn,
             this.direccionDataGridViewTextBoxColumn,
-            this.fechaNacimientoDataGridViewTextBoxColumn,
+            this.representanteDataGridViewTextBoxColumn,
             this.estadoDataGridViewTextBoxColumn});
-            this.DGVDatos.DataSource = this.clienteConsultarBindingSource;
-            this.DGVDatos.Location = new System.Drawing.Point(15, 108);
+            this.DGVDatos.DataSource = this.proveedorConsultarBindingSource;
+            this.DGVDatos.Location = new System.Drawing.Point(16, 114);
             this.DGVDatos.Name = "DGVDatos";
             this.DGVDatos.ReadOnly = true;
-            this.DGVDatos.Size = new System.Drawing.Size(598, 260);
-            this.DGVDatos.TabIndex = 23;
-            this.DGVDatos.CurrentCellChanged += new System.EventHandler(this.DGVDatos_CurrentCellChanged);
+            this.DGVDatos.Size = new System.Drawing.Size(587, 251);
+            this.DGVDatos.TabIndex = 20;
             // 
-            // iDClienteDataGridViewTextBoxColumn
+            // iDProveedorDataGridViewTextBoxColumn
             // 
-            this.iDClienteDataGridViewTextBoxColumn.DataPropertyName = "IDCliente";
-            this.iDClienteDataGridViewTextBoxColumn.HeaderText = "IDCliente";
-            this.iDClienteDataGridViewTextBoxColumn.Name = "iDClienteDataGridViewTextBoxColumn";
-            this.iDClienteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDProveedorDataGridViewTextBoxColumn.DataPropertyName = "IDProveedor";
+            this.iDProveedorDataGridViewTextBoxColumn.HeaderText = "IDProveedor";
+            this.iDProveedorDataGridViewTextBoxColumn.Name = "iDProveedorDataGridViewTextBoxColumn";
+            this.iDProveedorDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // cedulaDataGridViewTextBoxColumn
+            // nombreEmpresaDataGridViewTextBoxColumn
             // 
-            this.cedulaDataGridViewTextBoxColumn.DataPropertyName = "Cedula";
-            this.cedulaDataGridViewTextBoxColumn.HeaderText = "Cedula";
-            this.cedulaDataGridViewTextBoxColumn.Name = "cedulaDataGridViewTextBoxColumn";
-            this.cedulaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nombreEmpresaDataGridViewTextBoxColumn.DataPropertyName = "NombreEmpresa";
+            this.nombreEmpresaDataGridViewTextBoxColumn.HeaderText = "NombreEmpresa";
+            this.nombreEmpresaDataGridViewTextBoxColumn.Name = "nombreEmpresaDataGridViewTextBoxColumn";
+            this.nombreEmpresaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // nombreDataGridViewTextBoxColumn
+            // fechaRegistroDataGridViewTextBoxColumn
             // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // apellidoDataGridViewTextBoxColumn
-            // 
-            this.apellidoDataGridViewTextBoxColumn.DataPropertyName = "Apellido";
-            this.apellidoDataGridViewTextBoxColumn.HeaderText = "Apellido";
-            this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
-            this.apellidoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fechaRegistroDataGridViewTextBoxColumn.DataPropertyName = "FechaRegistro";
+            this.fechaRegistroDataGridViewTextBoxColumn.HeaderText = "FechaRegistro";
+            this.fechaRegistroDataGridViewTextBoxColumn.Name = "fechaRegistroDataGridViewTextBoxColumn";
+            this.fechaRegistroDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // contactoDataGridViewTextBoxColumn
             // 
@@ -346,6 +339,13 @@ namespace FactuStock
             this.contactoDataGridViewTextBoxColumn.Name = "contactoDataGridViewTextBoxColumn";
             this.contactoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // telefonoDataGridViewTextBoxColumn
+            // 
+            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono";
+            this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telefono";
+            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
+            this.telefonoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // direccionDataGridViewTextBoxColumn
             // 
             this.direccionDataGridViewTextBoxColumn.DataPropertyName = "Direccion";
@@ -353,12 +353,12 @@ namespace FactuStock
             this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
             this.direccionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // fechaNacimientoDataGridViewTextBoxColumn
+            // representanteDataGridViewTextBoxColumn
             // 
-            this.fechaNacimientoDataGridViewTextBoxColumn.DataPropertyName = "Fecha_Nacimiento";
-            this.fechaNacimientoDataGridViewTextBoxColumn.HeaderText = "Fecha_Nacimiento";
-            this.fechaNacimientoDataGridViewTextBoxColumn.Name = "fechaNacimientoDataGridViewTextBoxColumn";
-            this.fechaNacimientoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.representanteDataGridViewTextBoxColumn.DataPropertyName = "Representante";
+            this.representanteDataGridViewTextBoxColumn.HeaderText = "Representante";
+            this.representanteDataGridViewTextBoxColumn.Name = "representanteDataGridViewTextBoxColumn";
+            this.representanteDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // estadoDataGridViewTextBoxColumn
             // 
@@ -367,26 +367,26 @@ namespace FactuStock
             this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
             this.estadoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // clienteConsultarBindingSource
+            // proveedorConsultarBindingSource
             // 
-            this.clienteConsultarBindingSource.DataMember = "ClienteConsultar";
-            this.clienteConsultarBindingSource.DataSource = this.factuStockDataSet;
+            this.proveedorConsultarBindingSource.DataMember = "ProveedorConsultar";
+            this.proveedorConsultarBindingSource.DataSource = this.factuStockDataSet;
             // 
             // factuStockDataSet
             // 
             this.factuStockDataSet.DataSetName = "FactuStockDataSet";
             this.factuStockDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // clienteConsultarTableAdapter
+            // proveedorConsultarTableAdapter
             // 
-            this.clienteConsultarTableAdapter.ClearBeforeFill = true;
+            this.proveedorConsultarTableAdapter.ClearBeforeFill = true;
             // 
-            // ConsultarClientesGral
+            // ConsultarProveedorGral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(240)))), ((int)(((byte)(193)))));
-            this.ClientSize = new System.Drawing.Size(626, 445);
+            this.ClientSize = new System.Drawing.Size(624, 446);
             this.Controls.Add(this.DGVDatos);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label2);
@@ -394,10 +394,10 @@ namespace FactuStock
             this.Controls.Add(this.pBotones);
             this.Controls.Add(this.pTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ConsultarClientesGral";
-            this.Text = "ConsultarClientesGral";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ConsultarClientesGral_FormClosing);
-            this.Load += new System.EventHandler(this.ConsultarClientesGral_Load);
+            this.Name = "ConsultarProveedorGral";
+            this.Text = "ConsultarProveedorGral";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ConsultarProveedorGral_FormClosing);
+            this.Load += new System.EventHandler(this.ConsultarProveedorGral_Load);
             this.pBotones.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
@@ -409,7 +409,7 @@ namespace FactuStock
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVDatos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteConsultarBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proveedorConsultarBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.factuStockDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -430,7 +430,7 @@ namespace FactuStock
         private System.Windows.Forms.Button BUltimo;
         private System.Windows.Forms.Button BSiguiente;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label LCantClientes;
+        private System.Windows.Forms.Label LCantProveedores;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel pTitulo;
         private System.Windows.Forms.Label label1;
@@ -440,16 +440,16 @@ namespace FactuStock
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbBuscar;
         private System.Windows.Forms.DataGridView DGVDatos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDClienteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cedulaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDProveedorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreEmpresaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaRegistroDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn contactoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaNacimientoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn representanteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource clienteConsultarBindingSource;
+        private System.Windows.Forms.BindingSource proveedorConsultarBindingSource;
         private FactuStockDataSet factuStockDataSet;
-        private FactuStockDataSetTableAdapters.ClienteConsultarTableAdapter clienteConsultarTableAdapter;
+        private FactuStockDataSetTableAdapters.ProveedorConsultarTableAdapter proveedorConsultarTableAdapter;
     }
 }
